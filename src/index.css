@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white hover:bg-[#FF8C00];
+  }
+}
+
+.font-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.Typewriter__cursor {
+  color: #FF8C00 !important;
+}
