@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+      <nav className="fixed w-full bg-white/80 backdrop-blur-xs z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -109,18 +109,18 @@ function App() {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF8C00]"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-hidden focus:border-[#FF8C00]"
                   />
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF8C00]"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-hidden focus:border-[#FF8C00]"
                   />
                 </div>
                 <textarea
                   placeholder="Your message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-[#FF8C00]"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-hidden focus:border-[#FF8C00]"
                 ></textarea>
                 <button
                   type="submit"
