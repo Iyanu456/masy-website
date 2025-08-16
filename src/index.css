@@ -16,14 +16,20 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  a { cursor: pointer; }
 }
 
 @utility btn {
-  @apply px-6 py-2 rounded-full transition-all;
+  @apply px-6 max-sm:px-4 py-3 max-sm:py-2.5 rounded-xl transition-all items-center font-semibold cursor-pointer max-md:text-[0.85em] text-[0.9em] lg:text-[1em];
 }
 
 @utility btn-primary {
   @apply bg-black text-white hover:bg-[#FF8C00];
+}
+
+@utility btn-outline {
+  @apply border border-[#131111] text-[#131111] hover:bg-[#212dce] hover:text-gray-100 hover:border-[#212dce];
 }
 
 @layer base {
@@ -36,10 +42,11 @@
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
 .font-mono {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', monospace;
 }
 
 .Typewriter__cursor {
