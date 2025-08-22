@@ -52,11 +52,11 @@ export default function TestimonialCarousel({
 
   return (
     <div
-      className={`overflow-hidden py-6 relative w-[98vw] mx-auto items-center ${containerClass}`}
+      className={` overflow-hidden py-6 relative  mx-auto items-center ${containerClass}`}
     >
       <div
         ref={marqueeRef}
-        className={`flex gap-8 whitespace-nowrap ${
+        className={`max-sm:hidden flex gap-8 whitespace-nowrap ${
           speed === "slow" ? "animate-marquee-slow" : "animate-marquee"
         }`}
         onMouseEnter={handleMouseEnter}
@@ -65,6 +65,43 @@ export default function TestimonialCarousel({
         {[...testimonial, ...testimonial].map((item, index) => (
           <div
             className="cursor-pointer grid bg-white rounded-xl flex-shrink-0 px-8 py-7 w-[25em] whitespace-normal shadow-lg"
+            key={index}
+          >
+            {/* Rating */}
+            <div className="flex mb-3 gap-0.5">
+              {Array.from({ length: item.rating }, (_, i) => (
+                <Star fill="#FEBA00" className="border-0 outline-0 text-[#FEBA00]" size={18} key={i} />
+              ))}
+            </div>
+
+            {/* Testimonial text */}
+            <p className="text-gray-700 italic mb-4">{item.bodyText}</p>
+
+            {/* User info */}
+            <div className="flex items-center gap-3">
+              <img
+                src={item.profile || "/default-profile.png"}
+                alt={item.user}
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <div className="leading-tight">
+                <h4 className="font-semibold text-gray-800">{item.user}</h4>
+                <span className="text-sm text-gray-500">{item.userRole}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div
+      
+        className={`max-sm:flex hidden justify-center flex-col gap-8 px-2`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {[...testimonial, ...testimonial].map((item, index) => (
+          <div
+            className="cursor-pointer grid bg-white rounded-xl p-8 shadow-lg"
             key={index}
           >
             {/* Rating */}

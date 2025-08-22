@@ -54,7 +54,7 @@ const ourServices = [
 
 export default function NewHome() {
   return (
-    <main className="w-full mx-auto space-y-16 max-sm:space-y-8 pb-[12em]">
+    <main className="w-full mx-auto space-y-16 max-sm:space-y-8 pb-[12em] overflow-x-hidden">
 
       {/* Section 1 */}
       <section className="mx-auto flex flex-col lg:grid grid-cols-2 w-[95%] lg:w-[76%] gap-[3em] lg:gap-6 place-items-center max-sm:py-[2em] py-[3em] lg:py-[2em]">
@@ -114,7 +114,7 @@ export default function NewHome() {
         {/* Our Services */}
 
       <section className="bg-[#ffd7b6b4]/50 gap-6 w-[95%] md:w-[76%] mx-auto mt-6 max-sm:mt-[3em] px-4 md:px-14 py-12 rounded-2xl">
-        <h2 className="font-semibold text-3xl mx-auto w-fit mb-3">Our Services</h2>
+        <h2 className="max-sm:text-xl font-semibold text-3xl mx-auto w-fit mb-3">Our Services</h2>
         <p className="md:max-w-[63%] text-center mx-auto">
           We provide tailored academic support to help you excel — whether you need your ideas shaped into polished papers or want clarity on complex concepts. Our services are designed to meet you where you are and take you where you want to be.
         </p>
@@ -132,9 +132,9 @@ export default function NewHome() {
 
       {/* Section 5 */}
       {/* Client Testimonial */}
-      <section className="bg-gray-100 space-y-3 pt-10 pb-14">
-        <h2 className="font-semibold text-3xl mx-auto w-fit mb-3">Client Testimonial</h2>
-        <p className="md:max-w-[63%] text-center mx-auto">Success stories from our satisfied students and clients</p>
+      <section className="bg-gray-100 space-y-3 pt-12 rounded-xl pb-14 max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full">
+        <h2 className="max-sm:text-xl font-semibold text-3xl mx-auto w-fit mb-3">Client Testimonial</h2>
+        <p className="w-[80%] md:max-w-[63%] text-center mx-auto">Success stories from our satisfied students and clients</p>
         <TestimonialCarousel />
       </section>
 
