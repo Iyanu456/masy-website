@@ -52,3 +52,48 @@
 .Typewriter__cursor {
   color: #FF8C00 !important;
 }
+
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: 10s scroll linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 45s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+@media (width < 40rem) { 
+
+  .animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+}
+
