@@ -53,6 +53,9 @@
   color: #FF8C00 !important;
 }
 
+button {
+  cursor: pointer;
+}
 
 
 @keyframes scroll {

@@ -99,7 +99,7 @@ export default function TestimonialCarousel({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {[...testimonial, ...testimonial].map((item, index) => (
+        {[...testimonial].map((item, index) => (
           <div
             className="cursor-pointer grid bg-white rounded-xl p-8 shadow-lg"
             key={index}

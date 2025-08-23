@@ -1,4 +1,6 @@
 import TestimonialCarousel from "@/components/TestimonialCarousel"
+import { Plus, Minus } from "lucide-react"
+import { useState } from "react"
 
 
 const aboutUs = [
@@ -52,7 +54,32 @@ const ourServices = [
   },
 ]
 
+const faqs = [
+  {
+    question: "What services do you offer?",
+    answer: "We offer a range of academic support services including tutoring, writing assistance, proofreading, and exam preparation."
+  },
+  {
+    question: "How do you ensure quality",
+    answer: "Our team consists of qualified professionals with expertise in various academic fields. We follow strict quality control measures to ensure the highest standards."
+  },
+  {
+    question: "What are your turnaround times",
+    answer: "Turnaround times vary based on the service and complexity of the request. We strive to accommodate urgent needs whenever possible."
+  },
+  {
+    question: "How do you ensure client confidentiality and anonymity?",
+    answer: "We prioritize your privacy and ensure all interactions and data are kept secure and confidential."
+  },
+]
+
 export default function NewHome() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <main className="w-full mx-auto space-y-16 max-sm:space-y-8 pb-[12em] overflow-x-hidden">
 
@@ -114,7 +141,7 @@ export default function NewHome() {
         {/* Our Services */}
 
       <section className="bg-[#ffd7b6b4]/50 gap-6 w-[95%] md:w-[76%] mx-auto mt-6 max-sm:mt-[3em] px-4 md:px-14 py-12 rounded-2xl">
-        <h2 className="max-sm:text-xl font-semibold text-3xl mx-auto w-fit mb-3">Our Services</h2>
+        <h2 className="max-sm:text-2xl font-semibold text-3xl mx-auto w-fit mb-3">Our Services</h2>
         <p className="md:max-w-[63%] text-center mx-auto">
           We provide tailored academic support to help you excel — whether you need your ideas shaped into polished papers or want clarity on complex concepts. Our services are designed to meet you where you are and take you where you want to be.
         </p>
@@ -133,9 +160,35 @@ export default function NewHome() {
       {/* Section 5 */}
       {/* Client Testimonial */}
       <section className="bg-gray-100 space-y-3 pt-12 rounded-xl pb-14 max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full">
-        <h2 className="max-sm:text-xl font-semibold text-3xl mx-auto w-fit mb-3">Client Testimonial</h2>
+        <h2 className="max-sm:text-2xl font-semibold text-3xl mx-auto w-fit mb-3">Client Testimonial</h2>
         <p className="w-[80%] md:max-w-[63%] text-center mx-auto">Success stories from our satisfied students and clients</p>
         <TestimonialCarousel />
+      </section>
+
+
+
+      <section className="max-sm:mt-[4em] mt-[3em] space-y-6">
+        <h3 className="max-sm:text-2xl text-center font-semibold text-3xl">FAQ</h3>
+        <div className="w-[95%] md:w-[60%] mx-auto space-y-5">
+          {faqs.map((item, index) => (
+        <div key={index} className="bg-gray-100 rounded-md text-lg p-6 max-sm:x-3">
+          <div className="flex justify-between items-center font-semibold">
+            <p>{item.question}</p>
+            <button onClick={() => toggleFAQ(index)}>
+              {openIndex === index ? (
+                <Minus size={20} />
+              ) : (
+                <Plus size={20} />
+              )}
+            </button>
+          </div>
+
+          {openIndex === index && (
+            <p className="mt-4 text-gray-600">{item.answer}</p>
+          )}
+        </div>
+      ))}
+        </div>
       </section>
 
     </main>
