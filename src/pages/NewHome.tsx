@@ -168,7 +168,7 @@ export default function NewHome() {
 
 
       <section className="max-sm:mt-[4em] mt-[3em] space-y-6">
-        <h3 className="max-sm:text-2xl text-center font-semibold text-3xl">FAQ</h3>
+        <h3 className="max-sm:text-2xl text-center font-semibold text-3xl">FAQs</h3>
         <div className="w-[95%] md:w-[60%] mx-auto space-y-5">
           {faqs.map((item, index) => (
         <div key={index} className="bg-gray-100 rounded-md text-lg p-6 max-sm:x-3">
@@ -188,6 +188,22 @@ export default function NewHome() {
           )}
         </div>
       ))}
+        </div>
+      </section>
+
+
+      <section className="w-[95%] md:w-[76%] overflow-hidden mx-auto max-md:pt-14 md:pt-14 pt-0 flex-flex-col lg:grid md:grid-cols-[1.08fr_1fr] lg:grid-cols-2 bg-[#0F6395]  text-white rounded-2xl max-sm:mt-[4em]">
+        <div className="space-y-4 px-10 my-auto">
+          <h2 className="text-3xl font-semibold">Join the Community That Trusts Us</h2>
+          <p className="text-gray-100">Need support? Send a message or get a quick quote today!</p>
+          <div className="space-x-4 mt-[2em]">
+            <button className="btn btn-outline border-white text-white">Get a quote</button>
+            <button className="btn btn-primary bg-white text-[#0F6395] hover:text-white ">Send a message</button>
+          </div>
+        </div>
+
+        <div className="w-full max-sm:h-[25em] h-[27em]">
+          <img src="/image 13.png" className="w-full h-full object-cover rounded-r-xl mt-10 max-sm:mt-4" />
         </div>
       </section>
 
