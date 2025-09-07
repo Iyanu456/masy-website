@@ -5,6 +5,9 @@ import Services from './pages/Services';
 import Testimonials from './pages/Testimonials';
 import About from './pages/About';
 import Header from './components/Header';
+import TutoringPage from './pages/TutoringPage';
+import WritingPage from './pages/WritingPage';
+
 
 function App() {
   const location = useLocation();
@@ -22,6 +25,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/tutoring" element={<TutoringPage />} />
+          <Route path="/writing" element={<WritingPage />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>

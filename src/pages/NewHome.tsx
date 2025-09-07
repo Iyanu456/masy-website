@@ -1,5 +1,5 @@
 import TestimonialCarousel from "@/components/TestimonialCarousel"
-import { Plus, Minus } from "lucide-react"
+import { Plus, Minus, ChevronRight } from "lucide-react"
 import { useState } from "react"
 import { Facebook } from "lucide-react"
 
@@ -23,36 +23,30 @@ const aboutUs = [
 ]
 
 const ourServices = [
-  {
-    icon: "/about-4.png",
-    title: "Formatting & Citation Support",
-    bodyText: "Whether it’s APA, MLA, Chicago, or another style, we make sure your work looks professional and meets every guideline."
-  },
-  {
-    icon: "/about-5.png",
-    title: "Exam Preparation",
-    bodyText: "We’ll help you study smarter, not harder with targeted revision plans, practice questions, and confidence-building strategies."
-  },
-  {
-    icon: "/about-6.png",
-    title: "One-on-One Subject Coaching",
-    bodyText: "Get personalized lessons in your subject area, tailored to your pace and learning style."
-  },
+
   {
     icon: "/about-7.png",
-    title: "Essay & Research Paper Assistance",
-    bodyText: "Turn your ideas into well-structured, compelling papers. We guide you through planning, drafting, and refining so your work shines academically and creatively."
+    title: "Tutoring Services",
+    bodyText: "Our tutoring sessions simplify complex topics with one-on-one guidance, helping you build strong writing skills, deepen understanding, and gain confidence in your academic journey",
+    points: [
+      "From preschool to SATs — support at every stage of learning",
+      "Qualified, relatable tutors dedicated to student success",
+      "One-on-one sessions that simplify concepts and build confidence"
+    ],
+    link: "/tutoring"
   },
   {
     icon: "/about-8.png",
-    title: "Proofreading & Editing",
-    bodyText: "From grammar to flow, we ensure your writing is clear, concise, and impactful  making every sentence count."
+    title: "Writing Services",
+    bodyText: "We help students and researchers turn ideas into well-structured, original academic work—essays, papers, dissertations, or proposals—tailored to your needs and academic standards.",
+    points: [
+      "Essays, reports, and dissertations written to academic standards",
+      "Priority delivery available — even on urgent deadlines",
+      "Plagiarism-free, original work with proper referencing in any citation style"
+    ],
+    link: "/writing"
   },
-  {
-    icon: "/about-9.png",
-    title: "Concept Clarification",
-    bodyText: "Struggling with a topic? We break it down into simple, understandable steps and give you strategies to learn more effectively."
-  },
+  
 ]
 
 const faqs = [
@@ -147,12 +141,19 @@ export default function NewHome() {
         <p className="md:max-w-[63%] text-center mx-auto">
           We provide tailored academic support to help you excel — whether you need your ideas shaped into polished papers or want clarity on complex concepts. Our services are designed to meet you where you are and take you where you want to be.
         </p>
-        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[3em]">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mt-[3em]">
         {ourServices.map((item, index) => (
-          <div key={index} className="bg-white space-y-1.5 px-7 pt-10 pb-14 rounded-2xl">
-            <img src={item.icon}></img>
+          <div key={index} className="bg-white space-y-1.5 px-7 max-md:px-6 pt-12 max-md:pt-[1.8em]  pb-13 max-md:pb-[2em] rounded-2xl">
+            <img src={item.icon} className="max-h-[52px] max-w-[52px]"></img>
             <h3 className="text-xl font-semibold mt-4">{item.title}</h3>
             <p>{item.bodyText}</p>
+            <div className="space-y-4 text-gray-600 text-[0.95em] mt-[2.5em] font-semibold">
+              {item.points.map((point, index) => (
+                <p className="flex gap-1" key={index}><span><ChevronRight color="#FC9D33"/></span>{point}</p>
+              ))}
+            </div>
+
+            <p className=" max-md:mt-[2.2em] mt-[3.5em]"><a href={item.link} className="btn btn-primary">Learn more</a></p>
           </div>
         ))}
         </div>
@@ -260,12 +261,12 @@ export default function NewHome() {
         </div>
       </div>
 
-      <div className="mt-[2em] mb-2 flex justify-between w-[95%] md:w-[85%] lg:w-[76%] mx-auto">
+      <div className="mt-[2em] mb-2 flex max-md:flex-col-reverse justify-between w-[95%] md:w-[85%] lg:w-[76%] mx-auto">
           <div className="text-center text-sm text-gray-400 mt-8">
           &copy; {new Date().getFullYear()} MASY Consulting. All rights reserved.
         </div>
 
-        <div className="mb-0 mt-auto">
+        <div className="mb-0 mt-auto max-md:mx-auto max-md:mt-[3em]">
           <ul className="flex space-x-3">
             <li className="mb-0 mt-auto text-gray-300">Follow us on:</li>
             <li><a href="#"><img src="./Facebook.png" /></a></li>
