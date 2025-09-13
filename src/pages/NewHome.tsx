@@ -8,17 +8,17 @@ const aboutUs = [
   {
     icon: "/about-1.png",
     title: "Dedicated Team",
-    bodyText: "Our team of qualified professionals from various fields is here to guide you with personalized academic support, every step of the way."
+    bodyText: "Our qualified professionals from diverse fields provide personalized academic support, guiding you every step of the way."
   },
   {
     icon: "/about-2.png",
     title: "24/7 Support",
-    bodyText: "Our team is available 24/7 to ensure you get timely support whenever you need it. Because your success doesn’t wait and neither do we."
+    bodyText: "We’re available around the clock to ensure you get help whenever you need it — because your success shouldn’t have to wait."
   },
   {
     icon: "/about-3.png",
     title: "Custom Solutions",
-    bodyText: "From writing help to tutoring, every service we offer is thoughtfully tailored to your needs."
+    bodyText: "Whether it’s writing support or tutoring, every service is tailored to your unique needs and goals."
   },
 ]
 
@@ -80,10 +80,10 @@ export default function NewHome() {
     <main className="w-full mx-auto space-y-16 max-sm:space-y-8 pb-[12em] overflow-x-hidden">
 
       {/* Section 1 */}
-      <section className="mx-auto flex flex-col lg:grid grid-cols-2 w-[95%] lg:w-[76%] gap-[3em] lg:gap-6 place-items-center max-sm:py-[2em] py-[3em] lg:py-[2em]">
+      <section className="mx-auto flex flex-col lg:grid grid-cols-[1.4fr_1fr] w-[95%] lg:w-[76%] gap-[3em] lg:gap-6 place-items-center max-sm:py-[2em] py-[3em] lg:py-[3.5em] xl:py-[3em]">
         {/* Column 1 */}
         <div className="space-y-6 md:space-y-4 h-fit my-auto text-center lg:text-left">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16">Powering Knowledge, Driving Success</h2>
+          <h2 className="text-3xl lg:text-[2em] xl:text-[2.55em] font-bold lg:leading-12 xl:leading-16">Your academic success, <br></br>our expertise</h2>
           <p className="mx-auto lg:mx-0 max-w-[86%]">We offer expert tutoring, writing support, and editing to help you excel academically and professionally.</p>
 
           <div className="space-x-4 md:mt-8">
@@ -113,7 +113,11 @@ export default function NewHome() {
         </div>
         <div className="grid lg:mr-0 ml-auto my-auto mx-auto place-items max-sm:w-[95%] w-[55vw] lg:w-[90%] max-sm:mt-[1em]">
           <h3 className="max-sm:text-xl text-3xl mb-4 font-semibold max-sm:font-bold">About Us</h3>
-          <p>{`At MASY consulting, we help students like you excel academically and confidently through expertly crafted writing and tutoring services.`}<br></br> <br></br> {`Whether you’re writing a thesis, struggling with an assignment, or preparing for a big exam — we’ve got your back with professional guidance, clear explanations, and reliable support.`}</p>
+          <p>{`At Masy Consulting, we believe learning never stops. We provide academic and professional
+writing support — from essays and dissertations to proofreading and plagiarism checks — as
+well as personalized online tutoring for learners worldwide, from kindergarten to A-levels.`}<br></br> <br></br> {`Our
+mission is simple: to empower students and professionals with the guidance and expertise they
+need to achieve lasting success.`}</p>
         </div>
       </section>
 
@@ -211,74 +215,7 @@ export default function NewHome() {
       </section>
 
     </main>
-    <footer className="w-full bg-[#131111] text-white py-18 mt-10">
-      <div className="w-[95%] md:w-[85%] flex flex-col justify-center lg:w-[76%] mx-auto md:grid grid-cols-2 gap-4">
-
-        <div className="hidden max-md:block text-center mb-9 space-y-4 mx-auto w-[90%] lg:w-[80%]">
-          <h4 className="font-semibold text-lg mb-2">Subscribe to our newsletter</h4>
-          <div className="flex bg-white p-1 rounded-xl w-[100%]">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4  outline-none text-black  w-[100%] max-sm:w-[100%]"
-            />
-            <button className="btn btn-primary py-2.5 bg-[#131111]">
-              Subscribe
-            </button>
-          </div>
-        </div>
-
-        <div className="flex flex-col  max-md:text-center lg:grid grid-cols-2 gap-7">
-        <div className="space-y-4">
-          <h4 className="font-semibold text-lg mb-2">Quick Links</h4>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>Our Services</li>
-            <li>About</li>
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h4 className="font-semibold text-lg mb-2">Contact Us</h4>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>+234 907 607 4997</li>
-            <li>masywritings@gmail.com</li>
-          </ul>
-        </div>
-        </div>
-
-        <div className="max-md:hidden block space-y-4 mr-0 mx-auto w-full lg:w-[80%]">
-          <h4 className="font-semibold text-lg mb-2">Subscribe to our newsletter</h4>
-          <div className="flex bg-white p-1 rounded-xl w-[100%]">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4  outline-none text-black  w-[100%] max-sm:w-[100%]"
-            />
-            <button className="btn btn-primary py-2.5 bg-[#131111]">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-[2em] mb-2 flex max-md:flex-col-reverse justify-between w-[95%] md:w-[85%] lg:w-[76%] mx-auto">
-          <div className="text-center text-sm text-gray-400 mt-8">
-          &copy; {new Date().getFullYear()} MASY Consulting. All rights reserved.
-        </div>
-
-        <div className="mb-0 mt-auto max-md:mx-auto max-md:mt-[3em]">
-          <ul className="flex space-x-3">
-            <li className="mb-0 mt-auto text-gray-300">Follow us on:</li>
-            <li><a href="#"><img src="./Facebook.png" /></a></li>
-            <li><a href="#"><img src="./Instagram.png" /></a></li>
-            <li><a href="#"><img src="./LinkedIn.png" /></a></li>
-          </ul>
-        </div>
-      </div>
-      <hr className="w-[95%] md:w-[85%] lg:w-[76%] mx-auto bg-gray-500 border-gray-500"></hr>
-
-      
-    </footer>
+    
     </>
   )
 }

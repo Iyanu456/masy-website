@@ -35,10 +35,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: "Poppins"
   }
   
   body {
     @apply text-gray-900;
+    font-family: "Poppins"
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
@@ -48,6 +50,12 @@
 .font-mono {
   font-family: 'Poppins', monospace;
 }
+
+.font-public-sans {
+  font-family: "Public Sans";
+}
+
+
 
 .Typewriter__cursor {
   color: #FF8C00 !important;

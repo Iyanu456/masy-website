@@ -48,8 +48,8 @@ export default function TutoringPage() {
     <main className='mb-[8em] space-y-[6em] max-sm:space-y-[2em]'>
       <section>
         <div className='items-center w-full text-center my-8 mt-[5em] max-md:mt-[3em] space-y-3'>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16 max-w-[85%] mx-auto">Personalized Tutoring for Every Learning Goal</h2>
-          <p className="mx-auto font-medium text-gray-600 w-[80%]">We offer expert tutoring, writing support, and editing to help you excel academically and professionally.</p>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">Online One-to-One Tutoring</h2>
+          <p className="mx-auto font-medium text-gray-600 w-[80%]">Personalized sessions tailored to each learner’s needs, from kindergarten to A-levels.</p>
           <div className="space-x-4 mt-[2.5em] max-md:mt-[2em]">
             <button className="btn btn-outline">Learn more</button>
             <button className="btn btn-primary">Book a Session</button>
@@ -78,13 +78,13 @@ export default function TutoringPage() {
       </section>
 
 
-      <section className='grid place-items-center w-full h-max mt-[8em] max-md:mt-[0em] pb-[20em]'>
+      <section className='grid place-items-center w-full h-max mt-[8em] max-md:mt-[0em] pb-[10em]'>
         <div className='flex flex-col-reverse max-md:gap-[21em] md:grid md:grid-cols-[1.6fr_1fr] lg:grid-cols-2 gap-[1.5em] xl:gap-[2.5em] w-[80%] h-fit'>
 
 
 
           <div className='space-y-3 my-auto h-fit mt-[6vw]'>
-            <h3 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold'>Tutoring That Works for You</h3>
+            <h3 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>Tutoring That Works for You</h3>
             <p className='text-gray-600 font-medium'>Personalized support and strategies to help you master concepts, tackle exams, and study smarter.</p>
             <div className='grid xl:grid-cols-2 gap-[2em]  xl:gap-[3em] mt-[2.5em]'>
               {[point2.map((point, index) => (
@@ -113,6 +113,95 @@ export default function TutoringPage() {
           </div>
         </div>
         
+      </section>
+
+
+
+      <section className=" w-[95%] lg:w-[80%] mx-auto">
+        <h2 className="text-2xl md:text-4xl font-semibold w-full md:leading-14 md:max-w-[50%]">Your Learning Journey in Four Simple Steps</h2>
+        <p className="text-gray-600 font-medium md:max-w-[45%] mt-3.5">
+          A straightforward process that gets you from sign-up to success without the stress.
+        </p>
+
+        {/** Group 1 */}
+
+        <div className="flex flex-col md:grid grid-cols-[1.3fr_1fr] max-sm:gap-6 gap-4 mt-[2em] md:mt-[4em]">
+          <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
+            <div className="px-4 md:px-8 py-6 md:py-9">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+                1
+              </div>
+              <h3 className="font-semibold">Choose Your Subject</h3>
+              <p className="text-gray-600 font-medium lg:max-w-[60%] mt-3">
+                Browse our range of subjects and find the area you want to master. Whether it’s math, science or business,  we’ve got an expert for you.
+              </p>
+            </div>
+            <div className="p-2 mb-0 mt-auto">
+              <img
+                src="/rafiki-brown.png"
+                className="max-w-[45%]  lg:max-w-[33%] mr-0 ml-auto"
+              ></img>
+            </div>
+          </div>
+
+          <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
+            <div className="px-4 md:px-8 py-6 md:py-9">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+                2
+              </div>
+              <h3 className="font-semibold">Book a Free Consultation</h3>
+              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3">
+                Schedule a no-cost session to discuss your learning needs and goals. We’ll match you with the right tutor for your journey.
+              </p>
+            </div>
+            <div className="p-2 grid mb-0 mt-auto">
+              <img
+                src="/rafiki-brown-2.png"
+                className="max-w-[43%] md:max-w-[64%] lg:max-w-[49%] mr-0 ml-auto"
+              ></img>
+            </div>
+          </div>
+        </div>
+
+        {/* Group 2 */}
+
+        <div className="flex flex-col md:grid grid-cols-[1fr_1.3fr] max-sm:gap-6 gap-4 max-sm:mt-[1.5em] mt-[2em] md:mt-[1em]">
+          <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
+            <div className="px-4 md:px-8 py-6 md:py-9">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+                3
+              </div>
+              <h3 className="font-semibold">Meet Your Tutor</h3>
+              <p className="text-gray-600 font-medium lg:max-w-[80%] mt-3">
+                Have a friendly chat to get to know your tutor’s style, ask questions, and plan how you’ll work together for success.
+              </p>
+            </div>
+            <div className="p-2 mb-0 mt-auto">
+              <img
+                src="/amico-brown.png"
+                className="max-sm:max-w-[35%] max-w-[47%] lg:max-w-[38%] mr-0 ml-auto"
+              ></img>
+            </div>
+          </div>
+
+          <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
+            <div className="px-4 md:px-8 py-6 md:py-9">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+                4
+              </div>
+              <h3 className="font-semibold">Begin Your Learning Journey</h3>
+              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3">
+                Start your personalized sessions, track your progress, and see your confidence and grades grow.
+              </p>
+            </div>
+            <div className="p-2 grid mb-0 mt-auto">
+              <img
+                src="/amico-brown-2.png"
+                className="max-w-[32%] lg:max-w-[28%] mr-0 ml-auto"
+              ></img>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )

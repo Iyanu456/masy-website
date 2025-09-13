@@ -7,7 +7,7 @@ export default function Header() {
 
           <div className="flex items-center">
             <img src="/logo.png" alt="masy logo" className="max-w-10 max-h-10 pt-1"></img>
-            <span className="ml-3 md:text-xl font-semibold">Masy Consultings</span>
+            <span className="ml-3 md:text-xl font-semibold">Masy Consulting</span>
           </div>
 
           <div className="hidden lg:flex space-x-8 items-center font-medium">

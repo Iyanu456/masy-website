@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Testimonials from './pages/Testimonials';
 import About from './pages/About';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import TutoringPage from './pages/TutoringPage';
 import WritingPage from './pages/WritingPage';
 
@@ -30,6 +31,7 @@ function App() {
           {/* Add more routes as needed */}
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
