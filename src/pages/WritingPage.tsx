@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const point2 = [
   {
@@ -108,23 +109,23 @@ export default function WritingPage() {
   return (
     <main className="mb-[8em]">
       <section>
-        <div className="items-center w-full text-center my-8 mt-[5em] space-y-3">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">
+        <div className="items-center w-full text-center my-8 mt-[5em] space-y-3 max-md:space-y-7">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold max-md:leading-[1.4em] lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">
             Academic & Content Writing Support You Can Trust
           </h2>
-          <p className="mx-auto font-medium text-gray-600 w-[80%]">
+          <p className="mx-auto font-medium text-gray-600 w-[80%] max-md:text-[0.95em]">
             From essays to dissertations, we provide tailored, plagiarism-free
             writing and editing services designed to help you excel
           </p>
-          <div className="space-x-4 mt-[2.5em] max-md:mt-[2em]">
-            <button className="btn btn-outline">Learn more</button>
-            <button className="btn btn-primary">
+          <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em]">
+            <button className="btn btn-outline max-md:w-full">Learn more</button>
+            <button className="btn btn-primary max-md:w-full">
               Book a free consultation
             </button>
           </div>
         </div>
 
-        <div className="grid relative h-[max-content] max-sm:mt-[18em] mt-[22em] lg:mt-[27em] xl:mt-[30em]">
+        <div className="grid relative h-[max-content] max-sm:mt-[15em] mt-[22em] lg:mt-[27em] xl:mt-[30em]">
           <div className="absolute   bottom-0 top-auto right-0 left-0">
             <div className="bg-[#D2DEE4] w-[90%] rounded-t-2xl h-[22vw] md:h-[18vw] mx-auto"></div>
           </div>
@@ -135,31 +136,31 @@ export default function WritingPage() {
         </div>
       </section>
 
-      <section className="grid place-items-center w-full h-max mt-[8em] max-md:mt-[6em]">
-        <div className="flex flex-col-reverse max-md:gap-[21em] md:grid md:grid-cols-[1.6fr_1fr] lg:grid-cols-[1.2fr_1fr] gap-[1.5em] xl:gap-[1em] w-[80%] h-fit">
-          <div className="space-y-3 my-auto h-fit mt-[6vw]">
-            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
+      <section className="grid place-items-center w-full h-max mt-[8em] max-md:mt-[4em]">
+        <div className="flex flex-col-reverse max-md:gap-[21em] md:grid md:grid-cols-[1.6fr_1fr] lg:grid-cols-[1.2fr_1fr] gap-[1.5em] xl:gap-[1em] max-md:w-[95%] w-[80%] h-fit">
+          <div className="space-y-3 my-auto h-fit mt-[6vw] max-md:mt-[2em]">
+            <h3 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl font-semibold max-md:text-center">
               Quality You Can Rely On
             </h3>
-            <p className="text-gray-600 font-medium">
+            <p className="text-gray-600 font-medium max-md:text-center max-md:text-[0.95em] max-md:w-[90%] max-md:mx-auto">
               Work with a team that values originality, integrity, and timely
               delivery.
             </p>
-            <div className="grid xl:grid-cols-2 gap-[2em]  xl:gap-[3em] mt-[2.5em]">
+            <div className="grid xl:grid-cols-2 max-md:gap-[3em] gap-[2.5em]  xl:gap-[3em] mt-[3em]">
               {[
                 point2.map((point, index) => (
                   <div
                     key={index}
-                    className=" grid grid-cols-[40px_auto] gap-2"
+                    className="max-md:flex flex-col max-md:gap-5 justify-center grid grid-cols-[40px_auto] gap-2"
                   >
-                    <div className="h-full grid items-center">
-                      <img src={point.image} className="my-auto"></img>
+                    <div className="h-full grid place-items-center w-full">
+                      <img src={point.image} className="my-auto mx-auto"></img>
                     </div>
                     <div>
-                      <p className="font-bold font-public-sans">
+                      <p className="font-bold font-public-sans max-md:text-center max-md:mb-1">
                         {point.title}
                       </p>
-                      <p className="text-gray-600 font-medium text-[0.95em]">
+                      <p className="text-gray-600 font-medium text-[0.95em] max-md:text-center max-md:w-[90%] max-md:mx-auto">
                         {point.caption}
                       </p>
                     </div>
@@ -182,10 +183,10 @@ export default function WritingPage() {
       </section>
 
       <section className="bg-[#D2DEE4] gap-6 w-[95%] xl:w-[80%] mx-auto max-sm:mt-[4em] mt-[13em] px-4 md:px-8 lg:px-14 py-12 rounded-2xl">
-        <h2 className="max-sm:text-xl max-sm:text-ce font-semibold text-3xl w-fit mb-3">
+        <h2 className="max-md:text-lg max-md:text-center font-semibold text-3xl md:w-fit mb-3">
           Comprehensive Writing Services
         </h2>
-        <p className="md:max-w-[63%]">
+        <p className="max-md:text-sm max-md:text-center  md:max-w-[63%]">
           From first drafts to final submissions, we support every stage of your
           academic journey.
         </p>
@@ -193,11 +194,11 @@ export default function WritingPage() {
           {ourServices.map((item, index) => (
             <div
               key={index}
-              className="bg-white space-y-1.5 px-7 max-md:px-6 pt-6 xl:pt-12 max-md:pt-[1.8em] pb-7 xl:pb-13 max-md:pb-[2em] rounded-2xl"
+              className="bg-white space-y-1.5 px-7 max-md:px-6 pt-6 xl:pt-12 max-md:pt-[1.8em] pb-7 xl:pb-13 max-md:pb-[0em] rounded-2xl"
             >
               <img src={item.icon} className="max-h-[52px] max-w-[52px]"></img>
-              <h3 className="text-lg md:text-xl font-semibold mt-4">{item.title}</h3>
-              <p className="text-[0.95em]">{item.bodyText}</p>
+              <h3 className="text-[1em] md:text-xl font-semibold mt-4">{item.title}</h3>
+              <p className="text-[0.95em] max-md:text-[0.9em] max-md:leading-[2.1em]">{item.bodyText}</p>
               <div className="space-y-4 text-gray-600 text-[0.95em] mt-[2.5em] font-semibold"></div>
             </div>
           ))}
@@ -218,8 +219,8 @@ export default function WritingPage() {
       </section>
 
       <section className="mt-[6em] w-[90%] lg:w-[80%] mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold">How it works</h2>
-        <p className="text-gray-600 font-medium md:max-w-[45%] mt-3.5">
+        <h2 className="text-2xl md:text-4xl font-semibold max-md:text-center">How it works</h2>
+        <p className="text-gray-600 font-medium md:max-w-[45%] mt-3.5 max-md:text-sm max-md:text-center max-md:w-[90%] max-md:mx-auto">
           A straightforward system designed to make your writing experience
           simple and stress-free.
         </p>
@@ -229,11 +230,11 @@ export default function WritingPage() {
         <div className="flex flex-col md:grid grid-cols-[1.3fr_1fr] max-sm:gap-6 gap-4 mt-[2em] md:mt-[4em]">
           <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
             <div className="px-4 md:px-8 py-6 md:py-9">
-              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2 max-md:mb-[1.2em]">
                 1
               </div>
               <h3 className="font-semibold">Book a free conultation</h3>
-              <p className="text-gray-600 font-medium lg:max-w-[60%] mt-3">
+              <p className="text-gray-600 font-medium lg:max-w-[60%] mt-3 max-md:text-[0.9em]">
                 Start by scheduling a free 15–30 minute session to discuss your
                 project needs and goals.
               </p>
@@ -248,11 +249,11 @@ export default function WritingPage() {
 
           <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
             <div className="px-4 md:px-8 py-6 md:py-9">
-              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2 max-md:mb-[1.2em]">
                 2
               </div>
               <h3 className="font-semibold">Get a Transparent Quote</h3>
-              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3">
+              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3  max-md:text-[0.9em]">
                 We provide a clear, upfront cost estimate for your work with no
                 hidden fees.
               </p>
@@ -271,11 +272,11 @@ export default function WritingPage() {
         <div className="flex flex-col md:grid grid-cols-[1fr_1.3fr] max-sm:gap-6 gap-4 max-sm:mt-[1.5em] mt-[2em] md:mt-[1em]">
           <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
             <div className="px-4 md:px-8 py-6 md:py-9">
-              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2 max-md:mb-[1.2em]">
                 3
               </div>
               <h3 className="font-semibold">Writing & Support</h3>
-              <p className="text-gray-600 font-medium lg:max-w-[80%] mt-3">
+              <p className="text-gray-600 font-medium lg:max-w-[80%] mt-3  max-md:text-[0.9em]">
                 Our team carries out research, writing, editing, and formatting
                 tailored to your requirements.
               </p>
@@ -290,11 +291,11 @@ export default function WritingPage() {
 
           <div className="bg-[#F5F5F5] grid w-full min-h-[fit-content] h-[100%] rounded-2xl ">
             <div className="px-4 md:px-8 py-6 md:py-9">
-              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2">
+              <div className="h-8 w-8 grid font-semibold rounded-full place-items-center bg-[#C9DAE4] mb-2 max-md:mb-[1.2em]">
                 4
               </div>
               <h3 className="font-semibold">Review & Revise</h3>
-              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3">
+              <p className="text-gray-600 font-medium lg:max-w-[75%] mt-3  max-md:text-[0.9em]">
                 You review the draft and request free revisions within 7–14 days
                 to ensure satisfaction.
               </p>
@@ -309,16 +310,16 @@ export default function WritingPage() {
         </div>
       </section>
 
-      <section className="bg-[#D2DEE4] gap-6 w-[90%] xl:w-[80%] mx-auto max-sm:mt-[4em] mt-[13em] px-2 md:px-8 lg:px-14 max-sm:py-6 py-12 rounded-2xl">
-        <h2 className="max-sm:text-xl max-sm:text-ce font-semibold text-3xl w-fit mb-3">
+      <section className="bg-[#D2DEE4] gap-6 w-[95%] xl:w-[80%] mx-auto max-sm:mt-[4em] mt-[13em] px-2 md:px-8 lg:px-14 max-md:py-[2.2em] py-12 rounded-2xl">
+        <h2 className="max-md:text-lg max-md:text-center font-semibold text-3xl max-md:w-full w-fit mb-3">
           Transparent & Flexible Pricing
         </h2>
-        <p className="md:max-w-[63%]">
+        <p className="md:max-w-[63%] max-md:text-sm max-md:w-[90%] max-md:mx-auto max-md:text-center">
           Clear quotes and fair rates so you know exactly what to expect.
         </p>
 
-        <div className="w-full h-fit bg-white rounded-xl max-sm:py-6 py-12 max-sm:px-1 px-6 mt-8">
-          <div className="grid max-sm:grid-cols-3 grid-cols-[1fr_0.7fr_1.6fr]">
+        <div className="w-full h-fit md:bg-white rounded-xl max-sm:py-6 py-12 max-sm:px-1 px-6 mt-3">
+          <div className="grid max-md:hidden grid-cols-[1fr_0.7fr_1.6fr]">
             <div className="text-center font-bold py-7 border-b-2 border-[#042B73] max-sm:text-[0.85em] break-words whitespace-normal">
               Services
             </div>
@@ -329,7 +330,7 @@ export default function WritingPage() {
               Details
             </div>
           </div>
-          <div className="grid max-sm:grid-cols-3 grid-cols-[1fr_0.7fr_1.6fr]">
+          <div className="grid max-md:hidden grid-cols-[1fr_0.7fr_1.6fr]">
             {pricingDetails.map((item, index) => (
               <>
                 <div
@@ -362,14 +363,29 @@ export default function WritingPage() {
                 </div>
               </>
             ))}
+
+
+            
+          </div>
+
+          <div className="hidden max-md:flex flex-col gap-4">
+            {pricingDetails.map((item, index) => (
+              <>
+                <div key={index} className="bg-white px-4 py-6 rounded-xl">
+                  <p className="font-semibold text-[0.95em]">{item.services}</p>
+                  <p className="text-sm mb-4 text-gray-600 font-medium mt-1">{item.details}</p>
+                  <p className="text-sm flex"><ChevronRight size={18} className="my-auto" /> Pricing basis: {item.priceBasis}</p>
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="max-md:bg-[#0F6395] max-md:rounded-2xl relative w-[95%] md:w-[80%] mx-auto grid mt-[4em] md:mt-[9em]">
-        <div className="md:bg-[#0F6395] md:rounded-2xl h-fit space-y-4 px-4 md:px-10 py-[3em] md:mt-[5em]">
-          <h2 className="text-2xl md:text-3xl text-white font-semibold">Ready to Begin?</h2>
-          <p className="text-gray-100 md:w-[60%] lg:w-[95%]">
+        <div className="md:bg-[#0F6395] md:rounded-2xl h-fit max-md:space-y-2 space-y-4 px-4 md:px-10 py-[3em] md:mt-[5em]">
+          <h2 className="text-xl md:text-3xl text-white font-semibold">Ready to Begin?</h2>
+          <p className="text-gray-100 md:w-[60%] lg:w-[95%] max-sm:text-sm">
             Take the next step toward achieving your academic goals today.
           </p>
           <div className="space-x-4 mt-[2em]">
