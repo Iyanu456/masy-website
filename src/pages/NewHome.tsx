@@ -83,7 +83,7 @@ export default function NewHome() {
       <section className="mx-auto flex flex-col lg:grid grid-cols-[1.4fr_1fr] w-[95%] lg:w-[76%] gap-[3em] lg:gap-6 place-items-center max-sm:py-[2em] py-[3em] lg:py-[3.5em] xl:py-[3.5em]">
         {/* Column 1 */}
         <div className="space-y-6 md:space-y-4 h-fit my-auto text-center lg:text-left">
-          <h2 className="text-3xl lg:text-[2em] xl:text-[2.55em] font-bold max-sm:leading-12 lg:leading-12 xl:leading-14">From Knowledge to Achievement</h2>
+          <h2 className="text-3xl lg:text-[2em] xl:text-[2.55em] font-bold max-sm:leading-11 lg:leading-12 xl:leading-14">From Knowledge to Achievement</h2>
           <p className="mx-auto lg:mx-0 max-w-[86%] leading-8 xl:leading-7 max-sm:pb-6 max-sm:pt-2">We provide academic and professional writing support including plagiarism checks and thorough proofreading, alongside expert online tutoring for all levels worldwide— all designed to help you excel academically and beyond.</p>
 
           <div className="max-sm:flex-col-reverse max-sm:w-[75%] max-sm:mx-auto flex gap-4 md:mt-8">
