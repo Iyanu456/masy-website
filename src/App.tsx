@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import TutoringPage from './pages/TutoringPage';
 import WritingPage from './pages/WritingPage';
+import QuoteForm from './pages/Quote';
+import ContactForm from './pages/Contact';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<NewHome />} />
           <Route path="/old" element={<Home />} />
+          <Route path="/quote" element={<QuoteForm />} />
+          <Route path="/contact" element={<ContactForm />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/about-us" element={<About />} />

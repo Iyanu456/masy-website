@@ -75,7 +75,7 @@ export default function TestimonialCarousel({
             </div>
 
             {/* Testimonial text */}
-            <p className="text-gray-700 italic mb-4">{item.bodyText}</p>
+            <p className="text-gray-700 italic mb-4 max-md:text-[0.95em]">{item.bodyText}</p>
 
             {/* User info */}
             <div className="flex items-center gap-3">
@@ -112,7 +112,7 @@ export default function TestimonialCarousel({
             </div>
 
             {/* Testimonial text */}
-            <p className="text-gray-700 italic mb-4">{item.bodyText}</p>
+            <p className="text-gray-700 italic max-md:text-[0.95em] mt-2 mb-8 max-md:leading-6">{item.bodyText}</p>
 
             {/* User info */}
             <div className="flex items-center gap-3">

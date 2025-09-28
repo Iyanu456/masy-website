@@ -34,7 +34,7 @@ const ourServices = [
   },
   {
     icon: "/writing-icon-2.svg",
-    title: "Writing Services",
+    title: "Academic Writing",
     bodyText:
       "We help students and researchers turn ideas into well-structured, original academic work—essays, papers, dissertations, or proposals—tailored to your needs and academic standards.",
     link: "/writing",
@@ -75,11 +75,12 @@ const ourServices = [
 ];
 
 const subjects = [
-  "Mathematics & Statistics",
-  "Business & Economics",
-  "English",
-  "Biology",
-  "Physics",
+  "Business Management",
+  "Accounting",
+  "Law",
+  "Computer Science",
+  "Sciences",
+  "Finance",
 ];
 
 const pricingDetails = [
@@ -204,7 +205,7 @@ export default function WritingPage() {
           ))}
         </div>
         <div className="grid place-items-center w-[100%] mt-12 text-lg font-semibold">
-          <p>Subjects we specialize in</p>
+          <p>We specialize on all Fields and not limited to</p>
           <div className="flex flex-wrap justify-center gap-6 mt-6">
             {subjects.map((subject, index) => (
               <div

@@ -43,6 +43,22 @@ const point2 = [
   },
 ]
 
+
+const learningStages = [
+  {
+    level: "Early years/Primary school",
+    class: ["Kindergarten", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"]
+  },
+  {
+    level: "Secondary school",
+    class: ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "GSCE", "SATs"]
+  },
+  {
+    level: "Courses",
+    class: ["English", "Mathematics & Statistics", "Business & Economics", "Biology", "Chemistry", "Physics", "Coding & Graphics Design"]
+  }
+]
+
 export default function TutoringPage() {
   return (
     <main className='mb-[8em] space-y-[6em] max-sm:space-y-[2em]'>
@@ -114,6 +130,40 @@ export default function TutoringPage() {
         </div>
         
       </section>
+
+
+
+      {/* New Section */}
+      <section className=" w-[90%] lg:w-[80%] mx-auto max-sm:mt-[4em]">
+
+        <div>
+          <h2 className="text-lg text-center mx-auto md:text-4xl font-semibold w-[90%] md:leading-14 ">Learning Tailored to Every Stage</h2>
+        <p className="text-gray-600 font-medium w-[90%] mt-3.5 max-sm:text-sm text-center mx-auto">
+          Our tutoring covers all levels from primary school to GCSEs and SATs, ensuring every student gets personalized support
+        </p>
+        </div>
+
+        <div className='flex justify-center flex-wrap lg:grid grid-cols-3 gap-4 max-md:mt-[2em] mt-[4em]'>
+          {learningStages.map((item, index) => (
+              <div key={index} className='rounded-md max-md:w-full w-[20em] lg:w-[100%] bg-[#EBEBEB] py-[2.5em] px-[2em]'>
+                <p className='font-semibold mb-[2em] md:text-lg'>{item.level}</p>
+                <div className='space-y-3.5'>
+                  {item.class.map((classItem, index) => (
+                    <>
+                      <div className='font-medium max-md:text-sm'><span className='text-2xl'>•&nbsp;</span> {classItem}</div>
+                      <hr className='border border-b-0 bg-none border-t-1 border-gray-500'></hr>
+                    </>
+                    
+                  ))}
+                </div>
+              </div>
+          ))}
+        </div>
+        
+      </section>
+
+
+
 
 
 
