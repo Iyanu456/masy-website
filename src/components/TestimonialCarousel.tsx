@@ -1,35 +1,42 @@
 import { useRef } from "react";
-import { Star } from "lucide-react";
+import { Star, UserRound } from "lucide-react";
 
 // Dummy testimonials
 const testimonial = [
   {
     rating: 5,
     profile: "/profile-1.png", // replace with real images
-    bodyText: `"The tutoring services are outstanding. My grades improved significantly after working with their expert tutors."`,
-    user: "Michea Chen",
-    userRole: "Undergraduate Student",
+    bodyText: `"Timeliness, contributed towards graduating with Distinction."`,
+    user: "Nimot",
+    userRole: "",
   },
   {
     rating: 5,
     profile: "/profile-2.png",
-    bodyText: `"Masy Consultings have very comprehensive project writers. They do not only come up with a good topic but also use a distinctive approach in writing the topics in line with the lecturer's guidelines and instructions towards scoring best of grades in most of my courses."`,
-    user: "Laura Spigel",
-    userRole: "High School Student",
+    bodyText: `"The team at Masy Consulting is exceptionally good and professional. Their use of language, communication and originality in writing contributed to my success. The quality of work is outstanding."`,
+    user: "Hannah.P",
+    userRole: "LLM Student",
   },
   {
-    rating: 5,
+    rating: 4,
     profile: "/profile-3.png",
-    bodyText: `"Their research assistance was invaluable for my dissertation. Professional, thorough, and highly knowledgeable team."`,
-    user: "Emily Rodriguez",
-    userRole: "PhD candidate",
+    bodyText: `"Masy Consulting guided me through my coursework and dissertation when I was hopeless. The team carefully listened to my problems and helped me find solutions. They rescued me when I needed it most. Their support was top notch and affordable."`,
+    user: "Mumu",
+    userRole: "Post graduate student",
   },
   {
     rating: 5,
     profile: "/profile-4.png",
-    bodyText: `"I was completely overwhelmed by my final-year project, but their writing support broke everything into manageable steps. My supervisor praised the clarity and structure — I couldn’t have asked for better guidance!"`,
-    user: "Alex Johnson",
-    userRole: "High School Student",
+    bodyText: `"It was a good and interesting experience working with Masy Consulting."`,
+    user: "Anonymous",
+    userRole: "Masters student",
+  },
+  {
+    rating: 4,
+    profile: "/profile-4.png",
+    bodyText: `"Working with Masy Consulting has been exceptional. The team provided guidance on topic selection, writing structure, and how to align my work with the lecturer's guidelines. Their feedback and tutoring helped me improve my writing skills and score the best grades in most of my courses."`,
+    user: "Anonymous",
+    userRole: "",
   },
 ];
 
@@ -52,7 +59,7 @@ export default function TestimonialCarousel({
 
   return (
     <div
-      className={` overflow-hidden py-6 relative  mx-auto items-center ${containerClass}`}
+      className={` overflow-hidden py-6 relative mt-[4em] mx-auto items-center ${containerClass}`}
     >
       <div
         ref={marqueeRef}
@@ -78,12 +85,18 @@ export default function TestimonialCarousel({
             <p className="text-gray-700 italic mb-4 max-md:text-[0.95em]">{item.bodyText}</p>
 
             {/* User info */}
-            <div className="flex items-center gap-3">
-              <img
+            <div className="flex items-center gap-3 mb-0 mt-auto">
+              {/*<img
                 src={item.profile || "/default-profile.png"}
                 alt={item.user}
                 className="w-10 h-10 rounded-full object-cover"
-              />
+              />*/
+
+              <div className="bg-gray-100 border border-gray-300 w-10 h-10 rounded-full grid place-items-center">
+                <UserRound className="text-gray-400"/>
+              </div>
+              
+              }
               <div className="leading-tight">
                 <h4 className="font-semibold text-gray-800">{item.user}</h4>
                 <span className="text-sm text-gray-500">{item.userRole}</span>
@@ -115,12 +128,16 @@ export default function TestimonialCarousel({
             <p className="text-gray-700 italic max-md:text-[0.95em] mt-2 mb-8 max-md:leading-6">{item.bodyText}</p>
 
             {/* User info */}
-            <div className="flex items-center gap-3">
-              <img
+            <div className="flex items-center gap-3 mb-0 mt-auto">
+              {/*<img
                 src={item.profile || "/default-profile.png"}
                 alt={item.user}
                 className="w-10 h-10 rounded-full object-cover"
-              />
+              />*/
+
+              <div className="bg-gray-100 border border-gray-300 w-10 h-10 rounded-full grid place-items-center">
+                <UserRound className="text-gray-400"/>
+              </div>}
               <div className="leading-tight">
                 <h4 className="font-semibold text-gray-800">{item.user}</h4>
                 <span className="text-sm text-gray-500">{item.userRole}</span>

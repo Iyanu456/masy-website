@@ -59,17 +59,17 @@ export default function Header() {
 
             {/* Desktop links */}
             <div className="hidden lg:flex space-x-8 items-center font-medium">
-              <a href="/">Home</a>
-              <a href="#about">About us</a>
-              <a href="#services">Services</a>
-              <a href="#testimonials">Testimonial</a>
+              <a href="/" className="hover:text-[#FF8C00] transition ease-in duration-200">Home</a>
+              <a href="/tutoring" className="hover:text-[#FF8C00] transition ease-in duration-200">Tutoring</a>
+              <a href="#about" className="hover:text-[#FF8C00] transition ease-in duration-200">About us</a>
+              <a href="#testimonials" className="hover:text-[#FF8C00] transition ease-in duration-200">Testimonial</a>
             </div>
 
             {/* Desktop button */}
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="/contact"
-                className="px-5 text-[0.95em] py-2 font-medium bg-[#131111] text-white rounded-xl hover:bg-[#FF8C00] transition-all"
+                className="px-5 text-[0.95em] py-2 font-medium bg-[#212738] text-white rounded-xl hover:bg-[#FF8C00] transition-all"
               >
                 Contact Us
               </a>
@@ -101,11 +101,11 @@ export default function Header() {
               {isMenuOpen && (
                 <div className="md:hidden fixed text-center text-[0.95em] left-auto z-50 right-5  top-[4em] mt-3 w-48 bg-white shadow-lg rounded-lg border border-gray-100 px-8 py-7 flex flex-col space-y-7 font-medium">
                   <a href="/" onClick={() => setIsMenuOpen(false)}>Home</a>
-                  <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
+                  <a href="/tutoring" onClick={() => setIsMenuOpen(false)}>Tutoring</a>
                   <a href="#testimonials" onClick={() => setIsMenuOpen(false)}>Testimonial</a>
                   <a
                     href="/contact"
-                    className="px-4 text-[0.95em] py-2 rounded-lg bg-[#131111] text-white hover:bg-[#FF8C00] text-center"
+                    className="px-4 text-[0.95em] py-2 rounded-lg bg-[#212738] text-white hover:bg-[#FF8C00] text-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Contact Us

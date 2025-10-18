@@ -67,12 +67,12 @@ export default function TutoringPage() {
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">Online One-to-One Tutoring</h2>
           <p className="mx-auto font-medium text-gray-600 w-[80%] max-md:text-[0.95em]">Personalized sessions tailored to each learner’s needs, from kindergarten to A-levels.</p>
           <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em]">
-            <button className="btn btn-outline max-md:w-full">Learn more</button>
-            <button className="btn btn-primary max-md:w-full">Book a Session</button>
+            <button className="btn btn-outline max-md:w-full z-[60]">Learn more</button>
+            <a href="/quote" className="btn btn-primary max-md:w-full z-[60]">Book a Session</a>
           </div>
         </div>
 
-        <div className='grid relative h-[max-content] max-sm:mt-[13em] min-[530px]:mt-[18em] mt-[15em] lg:mt-[25em] xl:mt-[30em]'>
+        <div className='grid relative h-[max-content] max-sm:mt-[13em] min-[530px]:mt-[18em] mt-[15em] lg:mt-[25em] xl:mt-[34em]'>
           <div className='absolute   bottom-0 top-auto right-0 left-0'>
             <div className='bg-[#F17720] w-[90%] rounded-t-2xl h-[22vw] md:h-[18vw] mx-auto'></div>
           </div>

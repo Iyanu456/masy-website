@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#131111] text-white py-18 mt-10">
+    <footer className="w-full bg-[#212738] text-white py-18 mt-10 max-md:mt-1">
       <div className="w-[95%] md:w-[85%] flex flex-col justify-center lg:w-[76%] mx-auto md:grid grid-cols-2 gap-4">
 
         <div className="hidden max-md:block text-center mb-9 space-y-4 mx-auto w-[90%] lg:w-[80%]">
@@ -13,7 +13,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="px-4  outline-none text-black  w-[100%] max-sm:w-[100%]"
             />
-            <button className="btn btn-primary py-2.5 bg-[#131111]">
+            <button className="btn btn-primary py-2.5 bg-[#212738]">
               Subscribe
             </button>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="px-4  outline-none text-black  w-[100%] max-sm:w-[100%]"
             />
-            <button className="btn btn-primary py-2.5 bg-[#131111]">
+            <button className="btn btn-primary py-2.5 bg-[#212738]">
               Subscribe
             </button>
           </div>

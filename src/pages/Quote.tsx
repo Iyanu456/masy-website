@@ -115,7 +115,7 @@ export default function QuoteForm() {
                   </p>
                   <button
                     type="button"
-                    className="bg-black text-white px-5 py-2 rounded-lg hover:bg-[#FF8C00] transition-all"
+                    className="bg-[#212738] text-white px-5 py-2 rounded-lg hover:bg-[#FF8C00] transition-all"
                   >
                     Upload File
                   </button>
@@ -178,7 +178,7 @@ export default function QuoteForm() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] transition-all"
+            className="w-full bg-[#212738] text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] transition-all"
           >
             Get the quote
           </button>

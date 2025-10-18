@@ -120,9 +120,9 @@ export default function WritingPage() {
           </p>
           <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em]">
             <button className="btn btn-outline max-md:w-full">Learn more</button>
-            <button className="btn btn-primary max-md:w-full">
+            <a href="/quote" className="btn btn-primary max-md:w-full">
               Book a free consultation
-            </button>
+            </a>
           </div>
         </div>
 
@@ -389,10 +389,10 @@ export default function WritingPage() {
           <p className="text-gray-100 md:w-[60%] lg:w-[95%] max-sm:text-sm">
             Take the next step toward achieving your academic goals today.
           </p>
-          <div className="space-x-4 mt-[2em]">
-            <button className="btn btn-primary bg-white text-black hover:text-white ">
+          <div className="space-x-4 mt-[3em]">
+            <a href="/quote" className="btn btn-primary bg-white text-black hover:text-white ">
               Book Your Free Consultation Now
-            </button>
+            </a>
           </div>
         </div>
 

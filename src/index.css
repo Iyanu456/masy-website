@@ -21,15 +21,15 @@
 }
 
 @utility btn {
-  @apply px-6 max-sm:px-4 py-3 max-sm:py-2.5 rounded-xl transition-all items-center font-semibold cursor-pointer max-md:text-[0.85em] text-[0.9em] lg:text-[1em];
+  @apply px-6 max-sm:px-4 py-4 max-sm:py-2.5 rounded-xl transition-all items-center font-semibold cursor-pointer max-md:text-[0.85em] text-[0.9em] lg:text-[1em];
 }
 
 @utility btn-primary {
-  @apply bg-[#1d1d1d] text-white items-center hover:bg-[#FF8C00];
+  @apply bg-[#212738] text-white items-center hover:bg-[#FF8C00];
 }
 
 @utility btn-outline {
-  @apply border border-[#131111] text-[#131111] hover:bg-[#212dce] hover:text-gray-100 hover:border-[#212dce];
+  @apply border border-[#212738] text-[#212738] hover:text-white  hover:bg-[#FF8C00] hover:border-[#FF8C00];
 }
 
 @layer base {
