@@ -191,7 +191,7 @@ export default function NewHome() {
 
             <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5 shadow-xl/5 border border-gray-200">
               <img src={"/about-2.png"}></img>
-              <h3 className="text-xl font-semibold mt-5 mb-2">
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
                 100% Confidential & Original
               </h3>
               <p className=" max-sm:leading-7">
@@ -203,7 +203,7 @@ export default function NewHome() {
           
             <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5  shadow-xl/5 border border-gray-200">
               <img src={"/about-1.png"}></img>
-              <h3 className="text-xl font-semibold mt-5 mb-2">
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
                 Global Support, Personal Touch
               </h3>
               <p className=" max-sm:leading-7">
@@ -213,7 +213,7 @@ export default function NewHome() {
             </div>
             <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5  shadow-xl/5 border border-gray-200">
               <img src={"/about-3.png"}></img>
-              <h3 className="text-xl font-semibold mt-5 mb-2">
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
                 Proven Results
               </h3>
               <p className=" max-sm:leading-7">
@@ -263,7 +263,7 @@ export default function NewHome() {
                     src={item.icon}
                     className="max-h-[52px] max-w-[52px]"
                   ></img>
-                  <h3 className="text-xl font-semibold mt-4">{item.title}</h3>
+                  <h3 className="max-md:text-lg text-xl font-semibold mt-4">{item.title}</h3>
                   <p className="max-md:mt-2 max-md:leading-7">
                     {item.bodyText}
                   </p>
