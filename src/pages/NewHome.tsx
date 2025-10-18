@@ -122,7 +122,7 @@ export default function NewHome() {
               A-levels—all in one place.
             </p>
 
-            <div className="max-sm:flex-col-reverse max-sm:w-[75%] max-md:mx-auto w-fit lg:w-[18em] xl:w-fit flex lg:flex-col xl:flex-row gap-4 md:mt-8 md:mx-auto lg:mx-0 max-md:w-fit">
+            <div className="max-sm:flex-col-reverse max-sm:w-[80%] max-md:mx-auto w-fit lg:w-[18em] xl:w-fit flex lg:flex-col xl:flex-row gap-4 md:mt-8 md:mx-auto lg:mx-0 max-md:w-fit">
               <a
                 href="/tutoring"
                 className="btn btn-primary rounded-full md:w-fit lg:w-full xl:w-fit text-center"
