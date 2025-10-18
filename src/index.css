@@ -21,7 +21,7 @@
 }
 
 @utility btn {
-  @apply px-6 max-sm:px-4 py-4 max-sm:py-2.5 rounded-xl transition-all items-center font-semibold cursor-pointer max-md:text-[0.85em] text-[0.9em] lg:text-[1em];
+  @apply px-6 max-sm:px-4 py-4 max-sm:py-3 rounded-xl transition-all items-center font-semibold cursor-pointer;
 }
 
 @utility btn-primary {

@@ -174,7 +174,7 @@ export default function NewHome() {
             <div>
               <div className="space-y-6 max-md:space-y-4 max-md:items-center">
                 <p className="text-left max-md:text-center max-md:text-lg">Why Choose Masy Consulting?</p>
-                <h2 className=" md:text-2xl max-md:leading-8 text-2xl lg:text-3xl xl:text-4xl leading-12 font-semibold md:pb-3 max-md:text-center">
+                <h2 className=" md:text-2xl max-md:leading-8 text-2xl lg:text-3xl xl:text-4xl leading-12 font-semibold md:pb-3 max-md:text-center max-md:text-lg">
                   Personalized Support, {<br />}Academic Excellence.
                 </h2>
                 <div className="block max-sm:hidden max-md:grid place-items-center">
