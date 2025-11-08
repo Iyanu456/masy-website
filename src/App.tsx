@@ -10,6 +10,7 @@ import TutoringPage from './pages/TutoringPage';
 import WritingPage from './pages/WritingPage';
 import QuoteForm from './pages/Quote';
 import ContactForm from './pages/Contact';
+import NewTutoringPage from './pages/NewTutoringPage';
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/about-us" element={<About />} />
-          <Route path="/tutoring" element={<TutoringPage />} />
+          <Route path="/tutoring" element={<NewTutoringPage />} />
+          <Route path="/oldtutoring" element={<TutoringPage />} />
           <Route path="/writing" element={<WritingPage />} />
           {/* Add more routes as needed */}
         </Routes>
