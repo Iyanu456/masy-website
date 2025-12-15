@@ -63,7 +63,7 @@ export default function TutoringPage() {
   return (
     <main className='mb-[8em] space-y-[6em] max-sm:space-y-[2em]'>
       <section>
-        <div className='items-center w-full text-center my-8 mt-[5em] space-y-3 max-md:space-y-7'>
+        <div className='items-center w-full text-center my-8 mt-[10em] space-y-3 max-md:space-y-7'>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">Online One-to-One Tutoring</h2>
           <p className="mx-auto font-medium text-gray-600 w-[80%] max-md:text-[0.95em]">Personalized sessions tailored to each learner’s needs, from kindergarten to A-levels.</p>
           <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em]">

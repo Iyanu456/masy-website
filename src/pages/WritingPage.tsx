@@ -24,6 +24,31 @@ const point2 = [
   },
 ];
 
+
+const strongPoints = [
+  { 
+    stats: "150+",
+    point: "Completed Projects",
+    icon: "/completed-projects.svg",
+  },
+  {
+    stats: "20+",
+    point: "Expert Team Members",
+    icon: "/team-members.svg",
+  },
+  {
+    stats: "98%",
+    point: "Client Satisfaction",
+    icon: "/client-satisfaction.svg",
+  },
+  {
+    stats: "24/7",
+    point: "Support Available",
+    icon: "/24-7.svg",
+  },
+];
+
+
 const ourServices = [
   {
     icon: "/writing-icon-1.svg",
@@ -109,33 +134,116 @@ const pricingDetails = [
 export default function WritingPage() {
   return (
     <main className="mb-[8em]">
-      <section>
-        <div className="items-center w-full text-center my-8 mt-[5em] space-y-3 max-md:space-y-7">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold max-md:leading-[1.4em] lg:leading-12 xl:leading-16 max-w-[85%] mx-auto font-public-sans">
-            Academic & Content Writing Support You Can Trust
-          </h2>
-          <p className="mx-auto font-medium text-gray-600 w-[80%] max-md:text-[0.95em]">
-            From essays to dissertations, we provide tailored, plagiarism-free
-            writing and editing services designed to help you excel
-          </p>
-          <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em]">
-            <button className="btn btn-outline max-md:w-full">Learn more</button>
-            <a href="/quote" className="btn btn-primary max-md:w-full">
-              Book a free consultation
-            </a>
-          </div>
-        </div>
-
-        <div className="grid relative h-[max-content] max-sm:mt-[15em] mt-[22em] lg:mt-[27em] xl:mt-[30em]">
-          <div className="absolute   bottom-0 top-auto right-0 left-0">
-            <div className="bg-[#D2DEE4] w-[90%] rounded-t-2xl h-[22vw] md:h-[18vw] mx-auto"></div>
-          </div>
+      <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative max-md:mt-[-1em]">
+        <div>
           <img
-            className="absolute mx-auto max-sm:max-w-[65%] md:max-w-[48vw] max-md:max-w-[67%] bottom-0 top-auto left-0 right-0"
-            src="/image 44.png"
+            className="w-full h-full object-cover"
+            src="/writing-page-image.jpg"
           ></img>
         </div>
+
+        <div className="grid place-items-center w-full h-[105%] absolute top-auto bottom-auto left-auto right-auto bg-[#0827468c] mt-[-2em]">
+          <div className="flex flex-col gap-3 text-white w-fit m-auto">
+            <h1 className="max-w-[90%] max-sm:mt-[2em] max-sm:text-[2.2em] max-md:text-[2.5em] md:text-[3em] xl:text-[3.8em] text-white text-shadow-sm/5 m-auto text-center font-semibold font-public-sans leading-[1.4em] xl:max-w-[80%]">
+              Academic & Content Writing Support You Can Trust
+            </h1>
+
+            <p className="font-poppins lg:text-[1.1em] max-sm:max-w-[85%] max-w-[75%] lg:max-w-[60%] text-center m-auto font-light">
+              From business documents and web content to academic papers—we
+              handle all your writing needs with quality, confidentiality and
+              on-time delivery.
+            </p>
+
+            <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em] m-auto">
+              <a
+                href="/quote"
+                className="btn btn-outline border-white text-white bg-none max-md:w-full z-[60] max-md:text-center"
+              >
+                Get a quote
+              </a>
+              <a
+                href="/quote"
+                className="btn btn-primary bg-white text-black hover:text-white max-md:w-full z-[60] max-md:text-center"
+              >
+                Book Free Consultation
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
+      <section className="grid place-items-center py-[4em] pt-[3em] bg-[#1a2547]">
+        <div className="max-sm:w-full w-[90%] lg:w-[82%] mx-auto flex-wrap max-sm:text-[0.8em] md:grid md:grid-cols-2 max-md:grid max-md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-7 max-sm:gap-14">
+          {strongPoints.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center space-y-3 text-white text-[0.96em]"
+            >
+              <img src={item.icon} className=" max-w-[50px] max-md:max-w-[35px]"></img>
+              <p className="text-2xl font-medium">{item.stats}</p>
+
+              <p className="text-centertext-[1.1em] -mt-1">
+                {item.point}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+
+      {/* Section 2 - Why choose us section */}
+
+        <section className="mt-[6em] max-sm:w-[95%] w-[76%] mx-auto">
+           <h2 className="max-sm:text-lg font-semibold text-3xl w-fit max-md:mx-auto ">
+              Why Choose Masy Consulting
+            </h2>
+            <p className="md:max-w-[63%] text-left mt-2.5 leading-7 mb-[2em] max-md:mx-auto w-fit">
+              Personalized support, Academic Excellence.
+            </p>
+          <div className=" grid gap-5  md:gap-[2em] grid-cols-3 max-md:flex flex-col">
+           
+            
+
+            <div  className=" bg-[#EDF4FC] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full">
+              <img src={"/about-2.png"}></img>
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
+                Global Support, Personal Touch
+              </h3>
+              <p className=" max-sm:leading-7">
+                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
+                
+              </p>
+            </div>
+
+            <div  className="bg-[#E9F1EA] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full ">
+              <img src={"/about-2.png"}></img>
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
+                Proven Results Over Years
+              </h3>
+              <p className=" max-sm:leading-7">
+                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
+                
+              </p>
+            </div>
+
+            <div  className="bg-[#FCF3ED] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full  ">
+              <img src={"/about-2.png"}></img>
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
+                100% Confidential & Original
+              </h3>
+              <p className=" max-sm:leading-7">
+                Your privacy matters. Every piece of work is written from scratch, plagiarism-checked and completely confidential
+                
+              </p>
+            </div>
+
+            
+            </div>
+       
+          
+          
+        </section>
+
 
       <section className="grid place-items-center w-full h-max mt-[8em] max-md:mt-[4em]">
         <div className="flex flex-col-reverse max-md:gap-[21em] md:grid md:grid-cols-[1.6fr_1fr] lg:grid-cols-[1.2fr_1fr] gap-[1.5em] xl:gap-[1em] max-md:w-[95%] w-[80%] h-fit">

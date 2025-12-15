@@ -75,6 +75,29 @@ const faqs = [
   },
 ];
 
+const why_us= [
+  {
+    title: "Global Support, Personal Touch",
+    body: "We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams",
+    icon: "",
+    theme: "#EDF4FC"
+  },
+
+  {
+    title: "Proven Results Over Years",
+    body: "We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams",
+    icon: "",
+    theme: "#E9F1EA"
+  },
+
+  {
+    title: "100% Confidential & Original",
+    body: "Your privacy matters. Every piece of work is written from scratch, plagiarism-checked and completely confidential",
+    icon: "",
+    theme: "#FCF3ED"
+  }
+]
+
 const strongPoints = [
   {
     stats: "150+",
@@ -107,56 +130,54 @@ export default function NewHome() {
 
   return (
     <>
-      <main className="w-full mx-auto space-y-16 max-sm:space-y-8 pb-[12em] overflow-x-hidden">
+      <main className="w-full mx-auto  max-sm:space-y-8 pb-[12em] overflow-x-hidden">
         {/* Section 1 */}
-        <section className="mx-auto flex flex-col lg:grid grid-cols-[1.4fr_1fr] w-[95%] lg:w-[76%] gap-[3em] lg:gap-6 place-items-center max-sm:py-[2em] py-[3em] lg:py-[4em] xl:py-[4em]">
+        <section className="max-md:mb-[-0.5em] lg:py-0 md:mt-[3em] mx-auto flex flex-col lg:grid md:grid-cols-[1.8fr_1fr] max-md::grid-cols-[1.8fr_1.1fr] lg:grid-cols-[1.4fr_1.1fr]  w-[95%] md:w-[98%] lg:w-[85%] xl:w-[80%] gap-[3em] lg:gap-6 place-items-center h-[fit-content]">
           {/* Column 1 */}
-          <div className="space-y-6 md:space-y-4 h-fit my-auto text-center lg:text-left">
-            <h2 className="text-[1.8em] max-sm:leading-11 max-sm:px-4 font-public-sans lg:text-[2em] xl:text-[2.55em] font-bold max-md:leading-11 md:leading-12 xl:leading-14">
-              Stuck on a Writing Project?{<br></br>}Need an Online Tutor for
+          <div className="max-md:mx-auto max-md:w-fit lg:py-[4em] md:py-0 md:pt-5 space-y-6 md:space-y-6 h-fit my-auto text-center lg:text-left">
+            <h2 className=" text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.55em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto max-md:pt-[3em]">
+              <span className="text-primary">Stuck</span> on a Writing Project?{<br></br>}Need an Online <span className="text-primary">Tutor</span> for
               Your Child?
             </h2>
-            <p className="mx-auto lg:mx-0 max-w-[86%] leading-8 xl:leading-7 max-sm:pb-6 max-sm:pt-2">
-              We provide expert academic writing services for students worldwide
-              and personalised online tutoring for children from kindergarten to
-              A-levels—all in one place.
+            <p className="mx-auto lg:mx-0 max-w-[86%] md:text-[0.95em] leading-7 max-sm:pb-2 max-sm:pt-2">
+              Professional writing support and personalized online tutoring for every stage of learning.
             </p>
 
-            <div className="max-sm:flex-col-reverse max-sm:w-[80%] max-md:mx-auto w-fit lg:w-[18em] xl:w-fit flex lg:flex-col xl:flex-row gap-4 md:mt-8 md:mx-auto lg:mx-0 max-md:w-fit">
+            <div className="space-x-2.5 md:py-6 max-md:flex flex-col max-md:gap-2.5 max-md:w-[80%] max-md:mx-auto">
               <a
                 href="/tutoring"
-                className="btn btn-primary rounded-full md:w-fit lg:w-full xl:w-fit text-center"
+                className="btn btn-primary rounded-full lg:w-full xl:w-fit text-center"
               >
-                Find a Tutor for My child
+                Find a child Tutor
               </a>
               <a
                 href="/writing"
                 className="btn btn-outline rounded-full md:w-fit lg:w-full xl:w-fit text-center"
               >
-                Get Professional Writing Help
+                Get Writing Help
               </a>
             </div>
           </div>
 
           {/* Column 2 */}
-          <div className="grid w-full max-sm:place-items-center max-sm:-mt-4s mt-0">
-            <div className="grid rounded-full overflow-hidden md:w-[50%] lg:w-[95%] max-sm:w-[68%] h-full lg:mr-0 ml-auto mx-auto ">
+          <div className="grid w-full max-sm:place-items-center max-sm:-mt-4s mt-0 lg:mt-[-2.6em]">
+            <div className="grid   lg:mr-0 ml-auto mx-auto ">
               <img
-                src="/landing-2.png"
-                className="w-[100%] h-[100%] object-cover lg:mr-0 ml-auto"
+                src="/landing-image-1.png"
+                className="w-[80%] h-[100%] max-md:mx-auto md:w-[80%] md:h-[100%] md:mx-auto lg:w-[120%] lg:h-[120%] xl:w-[108%] xl:h-[108%] xl:mb-[3em] object-cover lg:mr-0 ml-auto "
               ></img>
             </div>
           </div>
         </section>
 
-        <section className="grid place-items-center py-[4em] bg-[#1E3A5F]">
+        <section className="grid place-items-center py-[2.2em] max-md:py-[4em] bg-[#1E3A5F] relative">
           <div className="max-sm:w-full w-[90%] lg:w-[82%] mx-auto flex-wrap max-sm:text-[0.8em] md:grid md:grid-cols-2 max-md:grid max-md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-7 max-sm:gap-14">
             {strongPoints.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-white text-[0.96em]"
               >
-                <img src={item.icon} className="mb-2 max-w-[35px]"></img>
+                <img src={item.icon} className="mb-1 max-w-[35px]"></img>
                 <p className="font-semibold max-md:mt-2.5 mt-3.5 text-lg lg:text-xl xl:text-2xl">
                   {item.stats}
                 </p>
@@ -168,71 +189,54 @@ export default function NewHome() {
 
         {/* Section 2 - Why choose us section */}
 
-        <section className="my-[7em] md:my-[10em]">
-          <div className="max-sm:w-[95%] w-[76%] mx-auto grid gap-5  md:gap-[2em] grid-cols-2 max-md:flex flex-col">
+        <section className="my-[7em] md:my-[10em] max-sm:w-[95%] w-[76%] mx-auto">
+           <h2 className="max-sm:text-2xl font-semibold text-3xl w-fit max-md:mx-auto">
+              Why Choose Masy Consulting
+            </h2>
+            <p className="md:max-w-[63%] text-left mt-2.5 leading-7 mb-[2em] max-md:mx-auto w-fit">
+              Personalized support, Academic Excellence.
+            </p>
+          <div className=" grid gap-5  md:gap-[2em] grid-cols-3 max-md:flex flex-col">
            
-            <div>
-              <div className="space-y-6 max-md:space-y-4 max-md:items-center">
-                <p className="text-left max-md:text-center max-md:text-lg">Why Choose Masy Consulting?</p>
-                <h2 className=" md:text-2xl max-md:leading-8 text-2xl lg:text-3xl xl:text-4xl leading-12 font-semibold md:pb-3 max-md:text-center max-md:text-lg">
-                  Personalized Support, {<br />}Academic Excellence.
-                </h2>
-                <div className="block max-sm:hidden max-md:grid place-items-center">
-                  <a
-                  href="/quote"
-                  className="btn btn-primary cursor-pointer rounded-full font-medium max-md:mx-auto max-sm:w-[14em] max-sm:text-center"
-                >
-                  Get a quote
-                </a>
-                </div>
+            
+
+            <div  className=" bg-[#EDF4FC] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full">
+              <img src={"/about-2.png"}></img>
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
+                Global Support, Personal Touch
+              </h3>
+              <p className=" max-sm:leading-7">
+                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
                 
-              </div>
+              </p>
             </div>
 
-            <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5 shadow-xl/5 border border-gray-200">
+            <div  className="bg-[#E9F1EA] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full ">
+              <img src={"/about-2.png"}></img>
+              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
+                Proven Results Over Years
+              </h3>
+              <p className=" max-sm:leading-7">
+                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
+                
+              </p>
+            </div>
+
+            <div  className="bg-[#FCF3ED] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full  ">
               <img src={"/about-2.png"}></img>
               <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
                 100% Confidential & Original
               </h3>
               <p className=" max-sm:leading-7">
-                Your privacy matters. Every piece of work is written from scratch, plagiarism-checked, and completely confidential.
+                Your privacy matters. Every piece of work is written from scratch, plagiarism-checked and completely confidential
                 
               </p>
             </div>
-        
-          
-            <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5  shadow-xl/5 border border-gray-200">
-              <img src={"/about-1.png"}></img>
-              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
-                Global Support, Personal Touch
-              </h3>
-              <p className=" max-sm:leading-7">
-                We serve students and families worldwide with 24/7 support, but
-                every project gets individual attention from our expert team.
-              </p>
-            </div>
-            <div className="bg-white space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full max-md:shadow-md/5  shadow-xl/5 border border-gray-200">
-              <img src={"/about-3.png"}></img>
-              <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
-                Proven Results
-              </h3>
-              <p className=" max-sm:leading-7">
-                With 150+ successful projects and 98% client satisfaction, we've helped students excel from kindergarten to PhD level.
-              </p>
-            </div>
 
-            <div className="max-sm:block hidden mt-[2em]">
-                <div className="max-md:grid place-items-center">
-                  <a
-                  href="/quote"
-                  className="btn btn-primary cursor-pointer rounded-full font-medium max-md:mx-auto max-sm:w-[19em] max-sm:text-center"
-                >
-                  Get a quote
-                </a>
-                </div>
+            
             </div>
        
-          </div>
+          
           
         </section>
 
@@ -241,9 +245,9 @@ export default function NewHome() {
        
         {/* Our Services */}
 
-        <section className="w-full grid place-items-center bg-[#F9FAFB] my-[7em] max-sm:mt-[3em] px-4 md:px-14 py-16 mb-[9em]">
+        <section id="services" className="w-full grid place-items-center bg-[#F9FAFB] my-[7em] max-sm:mt-[3em] px-4 md:px-14 py-16 mb-[9em]">
           <section
-            id="services"
+            
             className=" gap-6 w-[95%] md:w-[76%] lg:w-[80%] mx-auto"
           >
             <h2 className="max-sm:text-2xl font-semibold text-3xl w-fit ">

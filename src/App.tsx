@@ -11,6 +11,7 @@ import WritingPage from './pages/WritingPage';
 import QuoteForm from './pages/Quote';
 import ContactForm from './pages/Contact';
 import NewTutoringPage from './pages/NewTutoringPage';
+import NewLandingPage from './pages/NewLandingPage';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/tutoring" element={<NewTutoringPage />} />
           <Route path="/oldtutoring" element={<TutoringPage />} />
           <Route path="/writing" element={<WritingPage />} />
+          <Route path="/new" element={<NewLandingPage />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>

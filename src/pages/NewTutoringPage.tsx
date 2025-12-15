@@ -159,8 +159,8 @@ export default function NewTutoringPage() {
   };
 
   return (
-    <main className=" min-h-screen overflow-x-hidden mt-[-1.4em]">
-      <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative">
+    <main className=" min-h-screen overflow-x-hidden mt-[-0.1em] max-md:mt-[-1em]">
+      <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative ">
         <div>
           <img
             className="w-full h-full object-cover"
@@ -175,9 +175,7 @@ export default function NewTutoringPage() {
             </h1>
 
             <p className="font-poppins lg:text-[1.1em] max-sm:max-w-[85%] max-w-[75%] lg:max-w-[60%] text-center m-auto font-light">
-              From business documents and web content to academic papers—we
-              handle all your writing needs with quality, confidentiality, and
-              on-time delivery.
+              Our tutors guide, explain and support you every step of the way, so learning feels easier and achievable
             </p>
 
             <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em] m-auto">
