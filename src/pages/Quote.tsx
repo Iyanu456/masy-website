@@ -1,17 +1,135 @@
-
-
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { ArrowLeft } from "lucide-react";
 import CustomSelect from "@/components/CustomSelect";
 
-export default function QuoteForm() {
-  const [service, setService] = useState("Select...");
+type QuoteFormState = {
+  name: string;
+  email: string;
+  service: "Select..." | "Writing" | "Tutoring";
+
+  writing: {
+    academicLevel: string;
+    paperType: string;
+    subjectArea: string;
+    pages: string;
+    deadline: string;
+    writingStyle: string;
+    instructions: string;
+  };
+
+  tutoring: {
+    level: string;
+    subject: string;
+    learningGoals: string;
+  };
+};
+
+export default function QuoteForm(): JSX.Element {
+  const [form, setForm] = useState<QuoteFormState>({
+    name: "",
+    email: "",
+    service: "Select...",
+
+    writing: {
+      academicLevel: "Select...",
+      paperType: "Select...",
+      subjectArea: "Select...",
+      pages: "",
+      deadline: "Select...",
+      writingStyle: "Select...",
+      instructions: "",
+    },
+
+    tutoring: {
+      level: "Select...",
+      subject: "Select...",
+      learningGoals: "",
+    },
+  });
+
+  const updateField = (field: keyof QuoteFormState, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const updateWritingField = (
+    field: keyof QuoteFormState["writing"],
+    value: string
+  ) => {
+    setForm((prev) => ({
+      ...prev,
+      writing: { ...prev.writing, [field]: value },
+    }));
+  };
+
+  const updateTutoringField = (
+    field: keyof QuoteFormState["tutoring"],
+    value: string
+  ) => {
+    setForm((prev) => ({
+      ...prev,
+      tutoring: { ...prev.tutoring, [field]: value },
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+
+    let serviceDetails = "";
+
+    if (form.service === "Writing") {
+      serviceDetails = `
+*Academic Level*: ${form.writing.academicLevel}
+*Paper Type*: ${form.writing.paperType}
+*Subject Area*: ${form.writing.subjectArea}
+*Number of Pages*: ${form.writing.pages}
+*Deadline*: ${form.writing.deadline}
+*Writing Style*: ${form.writing.writingStyle}
+
+*Instructions*:
+${form.writing.instructions}
+      `;
+    }
+
+    if (form.service === "Tutoring") {
+      serviceDetails = `
+*Level*: ${form.tutoring.level}
+*Subject*: ${form.tutoring.subject}
+
+*Learning Goals*:
+${form.tutoring.learningGoals}
+      `;
+    }
+
+    const whatsappMessage = `
+Hello MASY Consulting Team,
+
+I would like to request a quote via your website. Please find my details below:
+
+*Name*: ${form.name}
+*Email*: ${form.email}
+*Service Requested*: ${form.service}
+
+${serviceDetails}
+
+I look forward to your response.
+
+Best regards,
+${form.name}
+    `;
+
+    const phoneNumber = "2349076074997";
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  };
 
   return (
     <section className="w-full mb-16">
-      {/* Header Section */}
+      {/* Header */}
       <div className="w-[90%] mx-auto bg-[#F7E3C8] mt-6 rounded-2xl pt-8 pb-[15em] px-6 text-center">
-        {/* Back Button */}
         <div className="w-[95%] lg:w-[80%] mx-auto">
           <a
             href="/"
@@ -27,159 +145,166 @@ export default function QuoteForm() {
         </h1>
         <p className="max-w-2xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed">
           Tell us what you’re looking for, and we’ll tailor a quote just for you.
-          Whether it’s writing, tutoring, or editing, we’re here to help you succeed.
         </p>
       </div>
 
-      {/* Form Card */}
+      {/* Form */}
       <div className="bg-white w-[95%] lg:w-[70%] mx-auto mt-[-10em] shadow-sm rounded-2xl p-6 md:p-10">
-        <form className="space-y-9">
-          {/* Two-column grid */}
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div>
-                <label className="block mb-4 text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-4 text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-                />
-              </div>
-            </div>
-
-            {/* Service Select */}
-            <CustomSelect
-              label="Service"
-              options={["Select...", "Writing", "Tutoring"]}
-              onChange={(val: string) => setService(val)}
+        <form onSubmit={handleSubmit} className="space-y-9">
+          {/* Name & Email */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              placeholder="Name"
+              value={form.name}
+              onChange={(e) => updateField("name", e.target.value)}
+              required
+              className="rounded-lg px-4 py-3 bg-[#FAFAFA]"
             />
 
-            {/* Writing Service Fields */}
-            {service === "Writing" && (
-              <>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <CustomSelect
-                    label="Academic Level"
-                    options={["Select...", "Undergraduate", "Masters", "PhD"]}
-                  />
+            <input
+              type="email"
+              placeholder="Email"
+              value={form.email}
+              onChange={(e) => updateField("email", e.target.value)}
+              required
+              className="rounded-lg px-4 py-3 bg-[#FAFAFA]"
+            />
+          </div>
 
-                  <CustomSelect
-                    label="Type of paper"
-                    options={["Select...", "Essay", "Research", "Assignment"]}
-                  />
-                </div>
+          {/* Service */}
+          <CustomSelect
+            label="Service"
+            options={["Select...", "Writing", "Tutoring"]}
+            onChange={(val: string) => updateField("service", val)}
+          />
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <CustomSelect
-                    label="Subject Area"
-                    options={["Select...", "Law", "Business", "Finance"]}
-                  />
+          {/* Writing */}
+          {form.service === "Writing" && (
+            <>
+              <CustomSelect
+                label="Academic Level"
+                options={["Select...", "Undergraduate", "Masters", "PhD", "Others, please specify"]}
+                onChange={(val) =>
+                  updateWritingField("academicLevel", val)
+                }
+              />
 
-                  <div>
-                    <label className="block mb-4 text-sm font-medium">
-                      Number of pages
-                    </label>
-                    <input
-                      type="number"
-                      placeholder="Number of pages"
-                      className="w-full items-center rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-                    />
-                  </div>
-                </div>
+              <CustomSelect
+                label="Type of Paper"
+                options={["Select...", "Essay", "Research", "Assignment", "Others, please specify"]}
+                onChange={(val) => updateWritingField("paperType", val)}
+              />
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <CustomSelect
-                    label="Deadline"
-                    options={["Select...", "3 Days", "1 Week", "2 Weeks"]}
-                  />
+              <CustomSelect
+                label="Subject Area"
+                options={["Select...", "Law", "Business", "Finance", "Others, please specify"]}
+                onChange={(val) =>
+                  updateWritingField("subjectArea", val)
+                }
+              />
 
-                  <CustomSelect
-                    label="Writing Style"
-                    options={["Select...", "APA", "MLA", "Chicago"]}
-                  />
-                </div>
+              <div>
+                <label className="block mb-4 text-sm font-medium">Number of pages</label>
+                <input
+                type="number"
+                placeholder="Number of pages"
+                value={form.writing.pages}
+                onChange={(e) =>
+                  updateWritingField("pages", e.target.value)
+                }
+                className="rounded-lg px-4 py-3 bg-[#FAFAFA]"
+              />
+              </div>
 
-                {/* File Upload */}
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                  <p className="text-sm text-gray-600 mb-4">
-                    Drag file or click the button
-                  </p>
-                  <button
-                    type="button"
-                    className="bg-[#212738] text-white px-5 py-2 rounded-lg hover:bg-[#FF8C00] transition-all"
-                  >
-                    Upload File
-                  </button>
-                </div>
+              
 
-                {/* Paper Instructions */}
+              <CustomSelect
+                label="Deadline"
+                options={["Select...", "3 Days", "1 Week", "2 Weeks", "Others, please specify"]}
+                onChange={(val) => updateWritingField("deadline", val)}
+              />
+
+              <CustomSelect
+                label="Writing Style"
+                options={["Select...", "APA", "MLA", "Chicago", "Others, please specify"]}
+                onChange={(val) =>
+                  updateWritingField("writingStyle", val)
+                }
+              />
+
                 <div>
-                <label className="block mb-4 text-sm font-medium">Paper instruction</label>
-                <textarea
-                  rows={5}
-                  placeholder="Enter the title of your paper and write what’s important for the writer to consider to meet your expectation. include class notes, textbook pages, and grading scales if applicable"
-                  className="placeholder:text-[0.95em] w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA] outline-orange-200"
-                />
-                </div>
-              </>
-            )}
+                <label className="block mb-4 text-sm font-medium">Paper instructions</label>
+              <textarea
+                rows={5}
+                placeholder="Paper instructions"
+                value={form.writing.instructions}
+                onChange={(e) =>
+                  updateWritingField("instructions", e.target.value)
+                }
+                className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
+              />
+              </div>
+            </>
+          )}
 
-            {/* Tutoring Service Fields */}
-            {service === "Tutoring" && (
-              <>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <CustomSelect
-                    label="Level"
-                    options={[
-                      "Select...",
-                      "Primary School",
-                      "Secondary School",
-                      "A-Levels/GCSE",
-                      "SATs",
-                    ]}
-                  />
+          {/* Tutoring */}
+          {form.service === "Tutoring" && (
+            <>
+              <CustomSelect
+                label="Level"
+                options={[
+                  "Select...",
+                  "Primary School",
+                  "Secondary School",
+                  "A-Levels/GCSE",
+                  "SATs",
+                  "Others, please specify"
+                ]}
+                onChange={(val) =>
+                  updateTutoringField("level", val)
+                }
+              />
 
-                  <CustomSelect
-                    label="Subject"
-                    options={[
-                      "Select...",
-                      "English",
-                      "Mathematics & Statistics",
-                      "Biology",
-                      "Chemistry",
-                      "Physics",
-                      "Business & Economics",
-                      "Coding & Graphics Design",
-                    ]}
-                  />
-                </div>
+              <CustomSelect
+                label="Subject"
+                options={[
+                  "Select...",
+                  "English",
+                  "Mathematics & Statistics",
+                  "Biology",
+                  "Chemistry",
+                  "Physics",
+                  "Business & Economics",
+                  "Coding & Graphics Design",
+                  "Others, please specify"
+                ]}
+                onChange={(val) =>
+                  updateTutoringField("subject", val)
+                }
+              />
 
                 <div>
                 <label className="block mb-4 text-sm font-medium">Learning goals</label>
-                <textarea
-                  rows={5}
-                  placeholder="Enter details about the student’s needs, challenges, or specific learning goals."
-                  className="placeholder:text-[0.95em] w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA] outline-orange-200"
-                />
-                </div>
-              </>
-            )}
-          </div>
+              <textarea
+                rows={5}
+                placeholder="Learning goals"
+                value={form.tutoring.learningGoals}
+                onChange={(e) =>
+                  updateTutoringField("learningGoals", e.target.value)
+                }
+                className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
+              />
 
-          {/* Submit Button */}
+              </div>
+            </>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-[#212738] text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] transition-all"
+            className="w-full bg-[#212738] text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] flex justify-center align-center"
           >
+            <img src="/whatsapp-svgrepo-com.svg" alt="" className="inline mr-2 h-6 w-6"/>
             Get the quote
           </button>
         </form>

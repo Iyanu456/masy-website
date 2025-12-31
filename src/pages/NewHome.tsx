@@ -56,22 +56,27 @@ const faqs = [
   {
     question: "What services do you offer?",
     answer:
-      "We offer a range of academic support services including tutoring, writing assistance, proofreading, and exam preparation.",
+      "We offer two main services:<br /><br /> 1. <strong>Professional writing support</strong> including essays, dissertations, research papers, business documents, content writing, editing, and proofreading. <br/><br />2. <strong>Personalized online tutoring</strong> for children from kindergarten to A-levels across multiple subjects including Math, English, Sciences, Business, and more.",
   },
   {
     question: "How do you ensure quality",
     answer:
-      "Our team consists of qualified professionals with expertise in various academic fields. We follow strict quality control measures to ensure the highest standards.",
+      "Every project is handled by qualified experts with relevant experience in the subject area. All written work is original, plagiarism-checked, and reviewed before delivery. We also offer free revisions within 7-14 days to ensure your complete satisfaction.",
   },
   {
     question: "What are your turnaround times",
     answer:
-      "Turnaround times vary based on the service and complexity of the request. We strive to accommodate urgent needs whenever possible.",
+      "We offer flexible deadlines based on your needs. For writing projects, we can accommodate urgent requests with 24-72 hour delivery. Standard projects typically take 5-10 days depending on complexity. Tutoring sessions are scheduled at times convenient for you and your child.",
   },
   {
     question: "How do you ensure client confidentiality and anonymity?",
     answer:
-      "We prioritize your privacy and ensure all interactions and data are kept secure and confidential.",
+      "We take your privacy seriously. All client information and project details are kept strictly confidential and secure. We never share your personal information, academic work, or any details with third parties. Your trust is our priority.",
+  },
+  {
+    question: "How much do your services cost?",
+    answer:
+      "Pricing varies based on project complexity, length, and deadline. We offer transparent quotes with no hidden fees. Contact us for a free consultation and personalized quote tailored to your specific needs.",
   },
 ];
 
@@ -163,8 +168,8 @@ export default function NewHome() {
           <div className="grid w-full max-sm:place-items-center max-sm:-mt-4s mt-0 lg:mt-[-2.6em]">
             <div className="grid   lg:mr-0 ml-auto mx-auto ">
               <img
-                src="/landing-image-1.png"
-                className="w-[80%] h-[100%] max-md:mx-auto md:w-[80%] md:h-[100%] md:mx-auto lg:w-[120%] lg:h-[120%] xl:w-[108%] xl:h-[108%] xl:mb-[3em] object-cover lg:mr-0 ml-auto "
+                src="/landing-image-2.png"
+                className="w-[80%] h-[100%] max-md:mx-auto md:w-[80%] md:h-[100%] md:mx-auto lg:w-[120%] lg:h-[120%] xl:w-[110%] xl:h-[110%] xl:mb-[3em] object-cover lg:mr-0 ml-auto "
               ></img>
             </div>
           </div>
@@ -330,8 +335,8 @@ export default function NewHome() {
                 </div>
 
                 {openIndex === index && (
-                  <p className="mt-4 text-gray-600 max-sm:text-[0.95em]">
-                    {item.answer}
+                  <p dangerouslySetInnerHTML={{ __html: item.answer }} className="mt-4 text-gray-600 max-sm:text-[0.95em]">
+                    
                   </p>
                 )}
               </div>

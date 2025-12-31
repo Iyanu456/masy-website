@@ -116,7 +116,7 @@ export default function Header() {
               <NavItem to="/" label="Home" />
               <NavItem to="/tutoring" label="Tutoring" />
               <NavItem to="/writing" label="Writing" />
-              <NavItem to="#services" label="About us" />
+              <NavItem to="/quote" label="Quote" />
               <NavItem to="/#testimonials" label="Testimonial" />
 
               <Link
@@ -164,8 +164,8 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           />
           <MobileNavItem
-            to="/about"
-            label="About us"
+            to="/quote"
+            label="Quote"
             onClick={() => setIsMenuOpen(false)}
           />
           <MobileNavItem

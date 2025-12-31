@@ -280,11 +280,11 @@ export default function WritingPage() {
           </div>
 
           <div className="relative grid w-full h-full max-md:mt-[2em]">
-            <div className="bg-[#042B73] top-[20%]  bottom-auto left-[20%] max-md:left-0 right-[10%] rounded-3xl max-md:h-[19em] xl:h-[28vw] h-[23em] absolute"></div>
-            <div className="absolute bg-[#D2DEE4] rounded-3xl right-0 left-[32%] top-[35%] bottom-0 xl:h-[25em] max-md:h-[19em] h-[20em] grid mr-0 ml-auto ">
+            <div className="bg-[#ffb730] top-[20%]  bottom-auto left-[20%] max-md:left-0 right-[10%] rounded-3xl max-md:h-[19em] xl:h-[28vw] h-[23em] absolute"></div>
+            <div className="absolute overflow-hidden shadow-xl  bg-[#D2DEE4] rounded-3xl right-0 left-[32%] top-[35%] bottom-0 xl:h-[25em] max-md:h-[19em] h-[20em] grid mr-0 ml-auto ">
               <img
-                src="/image 38.png"
-                className="ml-[6%] my-auto max-md:max-w-[95%] max-w-[88%] "
+                src="/quality-image.jpg"
+                className="my-auto max-md:max-w-[100%] max-w-[104%] "
               ></img>
             </div>
           </div>

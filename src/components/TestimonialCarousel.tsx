@@ -3,6 +3,7 @@ import { Star, UserRound } from "lucide-react";
 
 // Dummy testimonials
 const testimonial = [
+  
   {
     rating: 5,
     profile: "/profile-1.png", // replace with real images
@@ -27,6 +28,13 @@ const testimonial = [
   {
     rating: 5,
     profile: "/profile-4.png",
+    bodyText: `"Masy Consulting has demonstrated exceptional professionalism and expertise in supporting our curriculum and content development initiatives. Their team brought clarity, structure, and depth to our academic materials, ensuring alignment with our institutional standards and learner outcomes. Their collaborative approach, attention to detail, and commitment to quality have made them a valued partner in advancing our educational objectives."`,
+    user: "International Business School",
+    userRole: "",
+  },
+  {
+    rating: 5,
+    profile: "/profile-4.png",
     bodyText: `"It was a good and interesting experience working with Masy Consulting."`,
     user: "Anonymous",
     userRole: "Masters student",
@@ -38,6 +46,8 @@ const testimonial = [
     user: "Anonymous",
     userRole: "",
   },
+  
+
 ];
 
 export default function TestimonialCarousel({

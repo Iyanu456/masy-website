@@ -1,21 +1,32 @@
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface CustomSelectProps {
-  label?: string
-  options: string[]
-  onChange?: (value: string) => void   // 🔹 new prop
+  label?: string;
+  options: string[];
+  onChange?: (value: string) => void; // notifies parent
 }
 
 export default function CustomSelect({ label, options, onChange }: CustomSelectProps) {
-  const [selected, setSelected] = useState(options[0])
-  const [open, setOpen] = useState(false)
+  const [selected, setSelected] = useState(options[0]);
+  const [open, setOpen] = useState(false);
+  const [customValue, setCustomValue] = useState(""); // for "Others, please specify"
 
   const handleSelect = (opt: string) => {
-    setSelected(opt)
-    setOpen(false)
-    if (onChange) onChange(opt) // 🔹 notify parent
-  }
+    setSelected(opt);
+    setOpen(false);
+
+    // Clear custom value if user selects a regular option
+    if (opt !== "Others, please specify") setCustomValue("");
+
+    // Notify parent
+    if (onChange) onChange(opt === "Others, please specify" ? customValue : opt);
+  };
+
+  const handleCustomChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCustomValue(e.target.value);
+    if (onChange) onChange(e.target.value);
+  };
 
   return (
     <div className="relative w-full">
@@ -47,6 +58,17 @@ export default function CustomSelect({ label, options, onChange }: CustomSelectP
           ))}
         </ul>
       )}
+
+      {/* Custom input for "Others" */}
+      {selected === "Others, please specify" && (
+        <input
+          type="text"
+          placeholder="Please specify"
+          value={customValue}
+          onChange={handleCustomChange}
+          className="mt-2 w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
+        />
+      )}
     </div>
-  )
+  );
 }
