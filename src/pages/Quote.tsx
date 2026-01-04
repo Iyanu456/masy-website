@@ -206,6 +206,7 @@ ${form.name}
                   "Research Papers & Reports",
                   "Journal Articles & Publications",
                   "Conference Papers & Presentations",
+                  "Others, please specify",
                 ]}
                 onChange={(val) => updateWritingField("writingType", val)}
               />
