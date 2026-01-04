@@ -1,5 +1,6 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 export default function ContactForm(): JSX.Element {
   const [name, setName] = useState<string>("");
@@ -46,6 +47,44 @@ ${name}
   ): void => setMessage(e.target.value);
 
   return (
+    <>
+    <Helmet>
+        <title>MASY Consulting - Contact Us</title>
+        <meta
+          name="description"
+          content="Get in touch with MASY Consulting for tutoring or writing services. Request a quote, ask questions, or schedule a consultation today."
+        />
+        <meta
+          name="keywords"
+          content="Masy Consulting, contact, quote request, tutoring contact, writing services contact"
+        />
+        <meta property="og:title" content="Masy Consulting - Contact Us" />
+        <meta
+          property="og:description"
+          content="Contact Masy Consulting for tutoring or professional writing services. Quick response and expert support."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://masyconsulting.com/contact" />
+        <meta property="og:image" content="https://masyconsulting.com/images/contact-og.jpg" />
+
+         <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Masy Consulting - Contact Page",
+            "url": "https://masyconsulting.com/contact-us",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Masy Consulting",
+              "url": "https://masyconsulting.com",
+              "logo": "https://masyconsulting.com/masy-logo.png"
+            },
+            "contactType": "Customer Support",
+            "email": "masywritings@gmail.com",
+            "telephone": "+2349076074997"
+          })}
+        </script>
+      </Helmet>
     <section className="w-full mb-16">
       {/* Header Section */}
       <div className="w-[90%] mx-auto bg-[#D2DEE4] mt-6 rounded-2xl pt-8 pb-[15em] px-6 text-center">
@@ -122,5 +161,6 @@ ${name}
         </form>
       </div>
     </section>
+    </>
   );
 }

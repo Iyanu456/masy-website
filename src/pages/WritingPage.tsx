@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const point2 = [
   {
@@ -133,6 +134,52 @@ const pricingDetails = [
 
 export default function WritingPage() {
   return (
+    <>
+    <Helmet>
+        <title>Masy Consulting - Professional Writing Services</title>
+        <meta
+          name="description"
+          content="Masy Consulting provides expert writing services for academic, business, and content writing needs. Editing, proofreading, and plagiarism checks included."
+        />
+        <meta
+          name="keywords"
+          content="Masy Consulting, writing services, academic writing, business writing, content writing, editing, proofreading"
+        />
+        <meta property="og:title" content="Masy Consulting - Writing Services" />
+        <meta
+          property="og:description"
+          content="Professional writing services for academic, business, and content needs. Quality, plagiarism-free work."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://masyconsulting.com/writing" />
+        <meta property="og:image" content="https://masyconsulting.com/images/writing-og.jpg" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Masy Consulting - Writing Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Masy Consulting",
+              "url": "https://masyconsulting.com",
+              "logo": "https://masyconsulting.com/logo.png"
+            },
+            "description": "Expert writing services for academic, business, and content writing needs including essays, research papers, dissertations, business documents, blogs, and proofreading.",
+            "serviceType": [
+              "Academic Writing",
+              "Business Writing",
+              "Content Writing",
+              "Editing & Proofreading",
+              "Research Papers & Reports",
+              "Journal Articles & Publications",
+              "Conference Papers & Presentations"
+            ],
+            "url": "https://masyconsulting.com/writing"
+          })}
+        </script>
+      </Helmet>
+    
     <main className="mb-[8em]">
       <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative max-md:mt-[-1em]">
         <div>
@@ -510,5 +557,6 @@ export default function WritingPage() {
         />
       </section>
     </main>
+    </>
   );
 }

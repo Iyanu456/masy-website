@@ -1,6 +1,8 @@
 import { useState, FormEvent } from "react";
 import { ArrowLeft } from "lucide-react";
 import CustomSelect from "@/components/CustomSelect";
+import { Helmet } from "react-helmet";
+
 
 type QuoteFormState = {
   name: string;
@@ -8,8 +10,8 @@ type QuoteFormState = {
   service: "Select..." | "Writing" | "Tutoring";
 
   writing: {
-    academicLevel: string;
-    paperType: string;
+    writingType: string; // All writing types
+    academicLevel: string; // Only for academic/thesis writing
     subjectArea: string;
     pages: string;
     deadline: string;
@@ -31,8 +33,8 @@ export default function QuoteForm(): JSX.Element {
     service: "Select...",
 
     writing: {
+      writingType: "Select...",
       academicLevel: "Select...",
-      paperType: "Select...",
       subjectArea: "Select...",
       pages: "",
       deadline: "Select...",
@@ -78,8 +80,13 @@ export default function QuoteForm(): JSX.Element {
 
     if (form.service === "Writing") {
       serviceDetails = `
-*Academic Level*: ${form.writing.academicLevel}
-*Paper Type*: ${form.writing.paperType}
+*Type of Writing*: ${form.writing.writingType}
+${
+  form.writing.writingType === "Academic Writing" ||
+  form.writing.writingType === "Theses & Dissertations"
+    ? `*Academic Level*: ${form.writing.academicLevel}`
+    : ""
+}
 *Subject Area*: ${form.writing.subjectArea}
 *Number of Pages*: ${form.writing.pages}
 *Deadline*: ${form.writing.deadline}
@@ -127,6 +134,11 @@ ${form.name}
   };
 
   return (
+    <>
+    <Helmet>
+        <title>Request a Quote - MASY Consulting</title>
+        <meta name="description" content="Request a quote for tutoring or writing services from Masy Consulting." />
+      </Helmet>
     <section className="w-full mb-16">
       {/* Header */}
       <div className="w-[90%] mx-auto bg-[#F7E3C8] mt-6 rounded-2xl pt-8 pb-[15em] px-6 text-center">
@@ -183,67 +195,106 @@ ${form.name}
           {form.service === "Writing" && (
             <>
               <CustomSelect
-                label="Academic Level"
-                options={["Select...", "Undergraduate", "Masters", "PhD", "Others, please specify"]}
-                onChange={(val) =>
-                  updateWritingField("academicLevel", val)
-                }
+                label="Type of Writing"
+                options={[
+                  "Select...",
+                  "Business Writing",
+                  "Content Writing",
+                  "Editing & Proofreading",
+                  "Academic Writing",
+                  "Theses & Dissertations",
+                  "Research Papers & Reports",
+                  "Journal Articles & Publications",
+                  "Conference Papers & Presentations",
+                ]}
+                onChange={(val) => updateWritingField("writingType", val)}
               />
 
-              <CustomSelect
-                label="Type of Paper"
-                options={["Select...", "Essay", "Research", "Assignment", "Others, please specify"]}
-                onChange={(val) => updateWritingField("paperType", val)}
-              />
+              {/* Show academic level only for certain writing types */}
+              {(form.writing.writingType === "Academic Writing" ||
+                form.writing.writingType === "Theses & Dissertations") && (
+                <CustomSelect
+                  label="Academic Level"
+                  options={[
+                    "Select...",
+                    "Undergraduate",
+                    "Masters",
+                    "PhD",
+                    "Others, please specify",
+                  ]}
+                  onChange={(val) => updateWritingField("academicLevel", val)}
+                />
+              )}
 
+              {/* Subject Area */}
               <CustomSelect
                 label="Subject Area"
-                options={["Select...", "Law", "Business", "Finance", "Others, please specify"]}
-                onChange={(val) =>
-                  updateWritingField("subjectArea", val)
-                }
+                options={[
+                  "Select...",
+                  "Law",
+                  "Business",
+                  "Finance",
+                  "Science",
+                  "Arts & Humanities",
+                  "Others, please specify",
+                ]}
+                onChange={(val) => updateWritingField("subjectArea", val)}
               />
 
+              {/* Number of Pages */}
               <div>
-                <label className="block mb-4 text-sm font-medium">Number of pages</label>
+                <label className="block mb-4 text-sm font-medium">
+                  Number of pages
+                </label>
                 <input
-                type="number"
-                placeholder="Number of pages"
-                value={form.writing.pages}
-                onChange={(e) =>
-                  updateWritingField("pages", e.target.value)
-                }
-                className="rounded-lg px-4 py-3 bg-[#FAFAFA]"
-              />
+                  type="number"
+                  placeholder="Number of pages"
+                  value={form.writing.pages}
+                  onChange={(e) => updateWritingField("pages", e.target.value)}
+                  className="rounded-lg px-4 py-3 bg-[#FAFAFA]"
+                />
               </div>
 
-              
-
+              {/* Deadline */}
               <CustomSelect
-                label="Deadline"
-                options={["Select...", "3 Days", "1 Week", "2 Weeks", "Others, please specify"]}
+                label="Deadline (if applicable)"
+                options={[
+                  "Select...",
+                  "3 Days",
+                  "1 Week",
+                  "2 Weeks",
+                  "Others, please specify",
+                ]}
                 onChange={(val) => updateWritingField("deadline", val)}
               />
 
+              {/* Writing Style */}
               <CustomSelect
                 label="Writing Style"
-                options={["Select...", "APA", "MLA", "Chicago", "Others, please specify"]}
-                onChange={(val) =>
-                  updateWritingField("writingStyle", val)
-                }
+                options={[
+                  "Select...",
+                  "APA",
+                  "MLA",
+                  "Chicago",
+                  "Others, please specify",
+                ]}
+                onChange={(val) => updateWritingField("writingStyle", val)}
               />
 
-                <div>
-                <label className="block mb-4 text-sm font-medium">Paper instructions</label>
-              <textarea
-                rows={5}
-                placeholder="Paper instructions"
-                value={form.writing.instructions}
-                onChange={(e) =>
-                  updateWritingField("instructions", e.target.value)
-                }
-                className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
-              />
+              {/* Instructions */}
+              <div>
+                <label className="block mb-4 text-sm font-medium">
+                  Instructions
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Instructions for your writing project"
+                  value={form.writing.instructions}
+                  onChange={(e) =>
+                    updateWritingField("instructions", e.target.value)
+                  }
+                  className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
+                />
               </div>
             </>
           )}
@@ -259,11 +310,9 @@ ${form.name}
                   "Secondary School",
                   "A-Levels/GCSE",
                   "SATs",
-                  "Others, please specify"
+                  "Others, please specify",
                 ]}
-                onChange={(val) =>
-                  updateTutoringField("level", val)
-                }
+                onChange={(val) => updateTutoringField("level", val)}
               />
 
               <CustomSelect
@@ -277,38 +326,42 @@ ${form.name}
                   "Physics",
                   "Business & Economics",
                   "Coding & Graphics Design",
-                  "Others, please specify"
+                  "Others, please specify",
                 ]}
-                onChange={(val) =>
-                  updateTutoringField("subject", val)
-                }
+                onChange={(val) => updateTutoringField("subject", val)}
               />
 
-                <div>
-                <label className="block mb-4 text-sm font-medium">Learning goals</label>
-              <textarea
-                rows={5}
-                placeholder="Learning goals"
-                value={form.tutoring.learningGoals}
-                onChange={(e) =>
-                  updateTutoringField("learningGoals", e.target.value)
-                }
-                className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
-              />
-
+              <div>
+                <label className="block mb-4 text-sm font-medium">
+                  Learning goals
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Learning goals"
+                  value={form.tutoring.learningGoals}
+                  onChange={(e) =>
+                    updateTutoringField("learningGoals", e.target.value)
+                  }
+                  className="rounded-lg px-4 py-3 bg-[#FAFAFA] w-full"
+                />
               </div>
             </>
           )}
 
           <button
             type="submit"
-            className="w-full bg-[#212738] text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] flex justify-center align-center"
+            className="w-full bg-[#212738] text-white py-3 rounded-lg font-medium hover:bg-[#FF8C00] flex justify-center items-center"
           >
-            <img src="/whatsapp-svgrepo-com.svg" alt="" className="inline mr-2 h-6 w-6"/>
+            <img
+              src="/whatsapp-svgrepo-com.svg"
+              alt=""
+              className="inline mr-2 h-6 w-6"
+            />
             Get the quote
           </button>
         </form>
       </div>
     </section>
+    </>
   );
 }

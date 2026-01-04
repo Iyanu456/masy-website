@@ -1,8 +1,14 @@
 import { caption } from "framer-motion/client";
 import React, { useState } from "react";
 import { Plus, Minus, ChevronRight } from "lucide-react";
+import { Helmet } from "react-helmet";
+
 
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import StaffSlider from "@/components/StaffSlider"
+
+
+
 
 const strongPoints = [
   {
@@ -159,6 +165,50 @@ export default function NewTutoringPage() {
   };
 
   return (
+    <>
+     <Helmet>
+        <title>MASY Consulting - Personalized Tutoring Services</title>
+        <meta
+          name="description"
+          content="Masy Consulting offers personalized tutoring for children and high school students. Build confidence, improve grades, and achieve academic success."
+        />
+        <meta
+          name="keywords"
+          content="Masy Consulting, tutoring, private tutor, academic support, primary school, secondary school, A-levels, exam preparation"
+        />
+        <meta property="og:title" content="Masy Consulting - Tutoring Services" />
+        <meta
+          property="og:description"
+          content="Personalized one-on-one tutoring for students from primary to high school. Qualified, patient tutors for academic success."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://masyconsulting.com/tutoring" />
+        <meta property="og:image" content="https://masyconsulting.com/images/tutoring-og.jpg" />
+
+         <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Masy Consulting - Tutoring Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Masy Consulting",
+              "url": "https://masyconsulting.com",
+              "logo": "https://masyconsulting.com/logo.png"
+            },
+            "description": "One-on-one tutoring for students from primary school to A-levels. Customized sessions, homework help, exam preparation, and confidence building.",
+            "serviceType": [
+              "Primary School Tutoring",
+              "Secondary School Tutoring",
+              "A-Levels/GCSE Tutoring",
+              "SATs Tutoring",
+              "Exam Preparation",
+              "Homework Help"
+            ],
+            "url": "https://masyconsulting.com/tutoring"
+          })}
+        </script>
+      </Helmet>
     <main className=" min-h-screen overflow-x-hidden mt-[-0.1em] max-md:mt-[-1em]">
       <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative ">
         <div>
@@ -367,42 +417,13 @@ export default function NewTutoringPage() {
             </div>
 
             <div
-              className="h-fit my-auto  mr-0 ml-auto rounded-2xl border-2 border-[#fb860054] max-md:p-[5%] p-[12%]"
+              className="h-fit my-auto  rounded-2xl border-2 border-[#fb860054] max-md:p-[5%] p-[12%]"
               style={{
                 backgroundImage: `url("/card-background.png")`,
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <div className="w-full h-full m-auto bg-[#1E3A5F] rounded-[1em] text-center flex flex-col gap-3 text-white p-[2em] py-[3em] font-light">
-                <div className="flex flex-col gap-4 h-fit m-auto w-[90%]">
-                  <div className="grif place-items-center bg-white h-[8em] w-[8em] xl:h-[10em] overflow-hidden xl:w-[10em] rounded-full mx-auto">
-                    <img
-                      src="/profile-staff.png"
-                      className="w-[100%] h-[100%] object-cover"
-                    ></img>
-                  </div>
-                  <p className="font-medium">Sefa Mamu</p>
-                  <p className="text-[0.95em] opacity-95">
-                    5+ years helping students build confidence in math and ace
-                    their exams
-                  </p>
-                  <div className="text-[0.95em] space-y-3 mt-2">
-                    <p className="w-fit flex gap-2 mx-auto">
-                      <img src="/hat.svg" />
-                      Degree or certification
-                    </p>
-                    <p className="w-fit flex gap-2 mx-auto">
-                      <img src="/tick-1.svg" />
-                      Tutor training passed
-                    </p>
-                    <p className="w-fit flex gap-2 mx-auto">
-                      <img src="/star.svg" />
-                      Degree or certification
-                    </p>
-                  </div>
-                  <p className="text-[#F97316] font-semibold mt-2">Reviews</p>
-                </div>
-              </div>
+              <StaffSlider />
             </div>
           </div>
         </div>
@@ -609,5 +630,6 @@ export default function NewTutoringPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
