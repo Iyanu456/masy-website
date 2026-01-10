@@ -5,7 +5,7 @@ export const staffData = [
   {
     id: "oladapo-david",
     name: "Oladapo David Oreoluwa",
-    image: "/staff/oladapo-david.jpg",
+    image: "/teacher-profile/oladapo-david.jpg",
     yearsExperience: 5,
     credentials: [
       { icon: "/hat.svg", text: "BSc. Chemical Engineering" },
@@ -16,7 +16,7 @@ export const staffData = [
   {
     id: "emiola-habeeb",
     name: "Emiola Habeeb",
-    image: "/staff/emiola-habeeb.jpg",
+    image: "/teacher-profile/habeeb-ola.jpg",
     yearsExperience: 3,
     credentials: [
       { icon: "/hat.svg", text: "B.A. in Religion" },
@@ -27,7 +27,7 @@ export const staffData = [
   {
     id: "oladipupo-nafisat",
     name: "Oladipupo Nafisat Ayomide",
-    image: "/staff/nafisat-oladipupo.jpg",
+    image: "/teacher-profile/nafisat-oladipupo.jpg",
     yearsExperience: 7,
     credentials: [
       { icon: "/hat.svg", text: "NCE, B.Sc & B.Ed" },
@@ -38,7 +38,7 @@ export const staffData = [
   {
     id: "phoebe-adenekan",
     name: "Phoebe Anjolaoluwa Adenekan",
-    image: "/staff/phoebe-adenekan.jpg",
+    image: "/teacher-profile/phoebe-adenekan.jpeg",
     yearsExperience: 2,
     credentials: [
       { icon: "/hat.svg", text: "B.A. English Language" },
@@ -49,7 +49,7 @@ export const staffData = [
   {
     id: "olatunbosun-olayinka",
     name: "Olatunbosun Olayinka",
-    image: "/staff/olatunbosun-olayinka.jpg",
+    image: "/teacher-profile/olatunbosun-olayinka.jpeg",
     yearsExperience: 4,
     credentials: [
       { icon: "/hat.svg", text: "B.Sc Degree Holder" },
@@ -60,7 +60,7 @@ export const staffData = [
   {
     id: "kolade-adegbembo",
     name: "Adegbembo Kolade John",
-    image: "/staff/kolade-adegbembo.jpg",
+    image: "/teacher-profile/kolade-adegbembo.jpg",
     yearsExperience: 6,
     credentials: [
       { icon: "/hat.svg", text: "B.Sc Civil Engineering" },
@@ -90,7 +90,7 @@ export default function StaffSlider() {
       <div className="w-full max-w-md transition-opacity duration-500">
         <div className="w-full h-full m-auto bg-[#1E3A5F] rounded-[1em] text-center flex flex-col gap-3 text-white p-[2em] py-[3em] font-light">
           <div className="flex flex-col gap-4 h-fit m-auto w-[90%]">
-            <div className="grid place-items-center bg-white h-[8em] w-[8em] xl:h-[10em] overflow-hidden xl:w-[10em] rounded-full mx-auto">
+            <div className="grid place-items-center border-primary border-3 h-[8em] w-[8em] xl:h-[10em] overflow-hidden xl:w-[10em] rounded-full mx-auto">
               <img
                 src={staff.image}
                 alt={staff.name}

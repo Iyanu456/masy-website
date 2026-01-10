@@ -33,37 +33,37 @@ const faqs = [
   {
     question: "How long are the tutoring sessions?",
     answer:
-      "We offer a range of academic support services including tutoring, writing assistance, proofreading, and exam preparation.",
+      "Typically 45-60 minutes, but we can adjust based on your child's age and attention span.",
   },
   {
     question: "What if my child doesn't connect with the tutor?",
     answer:
-      "Our team consists of qualified professionals with expertise in various academic fields. We follow strict quality control measures to ensure the highest standards.",
+      "We'll match you with a different tutor at no extra cost. The right fit is important to us.",
   },
   {
     question: "Do you offer sibling discounts?",
     answer:
-      "Turnaround times vary based on the service and complexity of the request. We strive to accommodate urgent needs whenever possible.",
+      "Yes! Contact us to discuss group rates for siblings or friends learning together.",
   },
   {
     question: "What technology do we need?",
     answer:
-      "We prioritize your privacy and ensure all interactions and data are kept secure and confidential.",
+      "Just a computer or tablet with internet, webcam, and microphone. We use easy-to-access video platforms.",
   },
   {
     question: "Can we schedule sessions on weekends?",
     answer:
-      "We prioritize your privacy and ensure all interactions and data are kept secure and confidential.",
+      "Absolutely! We offer flexible scheduling including evenings and weekends to fit your family's routine.",
   },
   {
     question: "Do you work with international families?",
     answer:
-      "We prioritize your privacy and ensure all interactions and data are kept secure and confidential.",
+      "Yes! We serve families worldwide and are flexible with time zones. Whether you're in Lagos, London, or New York—we'll find session times that work for your family.",
   },
   {
     question: "How does payment work?",
     answer:
-      "We prioritize your privacy and ensure all interactions and data are kept secure and confidential.",
+      "We charge per hour and offer flexible payment options. You can pay at the end of the month, bi-weekly, or whichever schedule works best for you. We'll discuss payment terms during your free consultation.",
   },
 ];
 
@@ -354,16 +354,16 @@ export default function NewTutoringPage() {
             </div>
           ))}
         </div>
-        <div className=" w-[90%] md:max-w-[80%] lg:max-w-[70%] mx-auto">
+        <div className=" md:max-w-[80%] lg:max-w-[70%] mx-auto w-[max-content] ">
           <h3 className="font-semibold text-lg max-md:mt-[2em] mt-[3em]">
             Not sure if we cover your child's subject?{" "}
           </h3>
-          <div className="flex-col lg:flex-row flex mt-[3em] gap-[1.4em] md:gap-[2em] lg:gap-[4em]">
-            <a href="/contact" className="btn btn-primary text-center">
+          <div className="flex-col flex mt-[2em] gap-[1.4em] md:gap-[2em] lg:gap-[1.4em]">
+            <a href="/contact" className="btn btn-primary text-center max-md:w-full w-fit rounded-full px-8 mx-auto">
               Contact us
             </a>
-            <p className="my-auto font-semibold max-sm:text-center">
-              we'll find the right tutor.
+            <p className="my-auto font-semibold max-sm:text-center mx-auto opacity-80">
+              We'll find the right tutor.
             </p>
           </div>
         </div>
@@ -539,7 +539,7 @@ export default function NewTutoringPage() {
         <p className="w-[80%] md:max-w-[63%] text-center mx-auto md:text-lg max-md:mb-[-3.2em]">
           What Parents Are Saying
         </p>
-        <TestimonialCarousel />
+        <TestimonialCarousel tutoring={true}/>
       </section>
 
       <section className="max-sm:mt-[-2em] grid place-items-center w-full h-max max-md:py-[4em] pt-[8em] pb-[6em] bg-[#FFE7CC] max-md:mb-[2em] mb-[5em]">

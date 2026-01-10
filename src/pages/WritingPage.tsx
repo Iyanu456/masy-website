@@ -53,48 +53,56 @@ const strongPoints = [
 const ourServices = [
   {
     icon: "/writing-icon-1.svg",
-    title: "Conference Papers and Presentations",
+    title: "Business Writing",
     bodyText:
-      "We prepare concise papers and polished presentations for  conferences. Support includes structure, visuals, and guidance for impactful delivery",
+      "Professional documents for your business needs—proposals, reports, business plans, website content, corporate communications, and marketing materials.",
     link: "/tutoring",
   },
   {
     icon: "/writing-icon-2.svg",
-    title: "Academic Writing",
+    title: "Content Writing",
     bodyText:
-      "We help students and researchers turn ideas into well-structured, original academic work—essays, papers, dissertations, or proposals—tailored to your needs and academic standards.",
+      "Engaging blog posts, articles, web content, and SEO-optimized content tailored to your brand and audience.",
     link: "/writing",
   },
   {
     icon: "/writing-icon-3.svg",
-    title: "Journal Activities",
+    title: "Editing & Proofreading",
     bodyText:
-      "We draft, edit, and format articles to meet publishing standards. Each piece is refined for clarity, coherence, and academic tone.",
+      "Error-free content is achievable. Get your writing polished by professional editors—grammar, structure, clarity, and proper formatting.",
 
     link: "/writing",
   },
 
   {
     icon: "/writing-icon-4.svg",
-    title: "Essays, Term Papers & Coursework",
+    title: "Academic Writing",
     bodyText:
-      "We provide well-researched assignments tailored to course requirements and academic standards. Each piece is original, plagiarism-free, and properly formatted.",
+      "Support for essays, research papers, dissertations, proposals, and coursework—from undergraduate to PhD level across all disciplines.",
 
     link: "/writing",
   },
   {
     icon: "/writing-icon-5.svg",
-    title: "Theses & Dissertations ",
+    title: "Research Papers & Reports ",
     bodyText:
-      "We offer comprehensive support across all stages of thesis and dissertation writing. Assistance includes literature reviews, data analysis, and proper formatting.",
+      "Well-researched papers and reports that meet academic standards and communicate findings effectively.",
+
+    link: "/writing",
+  },
+  {
+    icon: "/writing-icon-4.svg",
+    title: "Journal Articles & Publications",
+    bodyText:
+      "Professional articles drafted, edited, and formatted to meet publishing standards and journal requirements.",
 
     link: "/writing",
   },
   {
     icon: "/writing-icon-6.svg",
-    title: "Research Proposals & Reports",
+    title: "Conference Papers & Presentations",
     bodyText:
-      "Our proposals and reports clearly outline research aims, methods, and findings. They are structured for academic precision and effective communication.",
+      "Concise papers and polished presentations for academic conferences, including structure and visual support.",
 
     link: "/writing",
   },
@@ -340,17 +348,16 @@ export default function WritingPage() {
 
       <section className="bg-[#D2DEE4] gap-6 w-[95%] xl:w-[80%] mx-auto max-sm:mt-[4em] mt-[13em] px-4 md:px-8 lg:px-14 py-12 rounded-2xl">
         <h2 className="max-md:text-lg max-md:text-center font-semibold text-3xl md:w-fit mb-3">
-          Comprehensive Writing Services
+          What we do
         </h2>
-        <p className="max-md:text-sm max-md:text-center  md:max-w-[63%]">
-          From first drafts to final submissions, we support every stage of your
-          academic journey.
+        <p className="max-md:text-sm max-md:text-center  md:max-w-[63%] max-md:max-w-[65vw] max-md:mx-auto">
+          From first drafts to final submissions, we support every stage of your writing journey.
         </p>
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[3em]">
           {ourServices.map((item, index) => (
             <div
               key={index}
-              className="bg-white space-y-1.5 px-7 max-md:px-6 pt-6 xl:pt-12 max-md:pt-[1.8em] pb-7 xl:pb-13 max-md:pb-[0em] rounded-2xl"
+              className="bg-white space-y-1.5 px-7 max-md:px-6 pt-6 xl:pt-12 max-md:pt-[1.8em] pb-7 xl:pb-3 max-md:pb-[0em] rounded-2xl"
             >
               <img src={item.icon} className="max-h-[52px] max-w-[52px]"></img>
               <h3 className="text-[1em] md:text-xl font-semibold mt-4">{item.title}</h3>

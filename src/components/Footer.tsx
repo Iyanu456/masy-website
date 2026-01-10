@@ -60,9 +60,9 @@ export default function Footer() {
         <div className="mb-0 mt-auto max-md:mx-auto max-md:mt-[3em] text-sm">
           <ul className="flex space-x-3">
             <li className="mb-0 mt-auto text-gray-300">Follow us on:</li>
-            <li><a href="#" ><img src="./Facebook.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
-            <li><a href="#"><img src="./Instagram.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
-            <li><a href="#"><img src="./LinkedIn.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
+            <li><a href="https://www.facebook.com/share/19ZdFXwVRb/?mibextid=wwXIfr" ><img src="./Facebook.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
+            <li><a href="https://www.instagram.com/masyconsulting?igsh=cmhobXFlajI0cDN3&utm_source=qr"><img src="./Instagram.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
+            <li><a href="https://www.linkedin.com/company/masy-consulting/"><img src="./LinkedIn.png" className='max-w-[24px] mb-0 mt-auto' /></a></li>
           </ul>
         </div>
       </div>
