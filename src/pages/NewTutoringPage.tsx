@@ -530,17 +530,17 @@ export default function NewTutoringPage() {
       </section>
 
       <section
-        id="testimonials"
-        className="space-y-3 pt-[5em] rounded-xl pb-[7em] max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full"
-      >
-        <h2 className="max-sm:text-2xl font-semibold text-3xl mx-auto w-fit mb-4">
-          Parents Testimonial
-        </h2>
-        <p className="w-[80%] md:max-w-[63%] text-center mx-auto md:text-lg max-md:mb-[-3.2em]">
-          What Parents Are Saying
-        </p>
-        <TestimonialCarousel tutoring={true}/>
-      </section>
+                id="testimonials"
+                className="space-y-3 pt-8 md:pt-16 rounded-xl pb-24 max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full"
+              >
+                <h2 className="max-sm:text-lg font-semibold text-3xl mx-auto w-fit mb-3 ">
+                  Client Testimonial
+                </h2>
+                <p className="w-[80%] md:max-w-[63%] text-center mx-auto mb-0 max-md:mb-[-2em]">
+                  Success stories from our satisfied parents and students
+                </p>
+                <TestimonialCarousel tutoring={true} />
+              </section>
 
       <section className="max-sm:mt-[-2em] grid place-items-center w-full h-max max-md:py-[4em] pt-[8em] pb-[6em] bg-[#FFE7CC] max-md:mb-[2em] mb-[5em]">
         <div className="flex max-md:flex-col md:flex-col max-md:gap-[2em] lg:flex-row gap-[2em] xl:gap-[2.5em] max-sm:w-[90%] w-[80%] h-fit">

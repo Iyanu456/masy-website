@@ -30,9 +30,9 @@ const ourServices = [
     icon: "/about-8.png",
     title: "Writing Services",
     bodyText:
-      "Expert writing and editing support for students and professionals—from essays and dissertations to business documents and blog content.",
+      "Professional writing, editing, and research support for businesses, professionals, and academics delivered with clarity, precision, and purpose.  ",
     points: [
-      "Academic & Professional Writing.",
+      "Professional & Business Writing.",
       "Content Writing & Copywriting.",
       "Editing, Proofreading & Plagiarism Checks.",
     ],
@@ -44,9 +44,9 @@ const ourServices = [
     bodyText:
       "Personalized one-on-one tutoring that makes learning easy and enjoyable. From kindergarten to A-levels, we help your child build confidence and achieve better grades",
     points: [
-      "Homework Help & Exam Preparation",
-      "Qualified, Patient Tutors",
       "Customized Learning Sessions",
+      "Qualified, Patient Tutors",
+      "Homework Help & Exam Preparation",
     ],
     link: "/tutoring",
   },
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "What services do you offer?",
     answer:
-      "We offer two main services:<br /><br /> 1. <strong>Professional writing support</strong> including essays, dissertations, research papers, business documents, content writing, editing, and proofreading. <br/><br />2. <strong>Personalized online tutoring</strong> for children from kindergarten to A-levels across multiple subjects including Math, English, Sciences, Business, and more.",
+      "We offer two main services:<br /><br /> 1. <strong>Professional writing support</strong> including business documents, content writing, research papers, presentations, editing, and proofreading. <br/><br />2. <strong>Personalized online tutoring</strong> for children from kindergarten to A-levels across multiple subjects including Math, English, Sciences, Business, and more.",
   },
   {
     question: "How do you ensure quality",
@@ -90,7 +90,7 @@ const why_us= [
 
   {
     title: "Proven Results Over Years",
-    body: "We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams",
+    body: "With 150+ successful projects and 98% client satisfaction, we've helped students excel from kindergarten to PhD level.",
     icon: "",
     theme: "#E9F1EA"
   },
@@ -140,8 +140,8 @@ export default function NewHome() {
         <section className="max-md:mb-[-0.5em] lg:py-0 md:mt-[3em] mx-auto flex flex-col lg:grid md:grid-cols-[1.8fr_1fr] max-md::grid-cols-[1.8fr_1.1fr] lg:grid-cols-[1.4fr_1.1fr]  w-[95%] md:w-[98%] lg:w-[85%] xl:w-[80%] gap-[3em] lg:gap-6 place-items-center h-[fit-content]">
           {/* Column 1 */}
           <div className="max-md:mx-auto max-md:w-fit lg:py-[4em] md:py-0 md:pt-5 space-y-6 md:space-y-6 h-fit my-auto text-center lg:text-left">
-            <h2 className=" text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.55em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto max-md:pt-[3em]">
-              <span className="text-primary">Stuck</span> on a Writing Project?{<br></br>}Need an Online <span className="text-primary">Tutor</span> for
+            <h2 className=" text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.3em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto max-md:pt-[3em]">
+              <span className="text-primary">Need</span> a Professional Writing Support?{<br></br>}Need an Online <span className="text-primary">Tutor</span> for
               Your Child?
             </h2>
             <p className="mx-auto lg:mx-0 max-w-[86%] md:text-[0.95em] leading-7 max-sm:pb-2 max-sm:pt-2">
@@ -149,17 +149,18 @@ export default function NewHome() {
             </p>
 
             <div className="space-x-2.5 md:py-6 max-md:flex flex-col max-md:gap-2.5 max-md:w-[80%] max-md:mx-auto">
-              <a
-                href="/tutoring"
-                className="btn btn-primary rounded-full lg:w-full xl:w-fit text-center"
-              >
-                Find a child Tutor
-              </a>
+              
               <a
                 href="/writing"
-                className="btn btn-outline rounded-full md:w-fit lg:w-full xl:w-fit text-center"
+                className="btn btn-primary  rounded-full md:w-fit lg:w-full xl:w-fit text-center"
               >
-                Get Writing Help
+                Get Writing Support
+              </a>
+              <a
+                href="/tutoring"
+                className="btn btn-outline rounded-full lg:w-full xl:w-fit text-center"
+              >
+                Find a child Tutor
               </a>
             </div>
           </div>
@@ -222,7 +223,7 @@ export default function NewHome() {
                 Proven Results Over Years
               </h3>
               <p className=" max-sm:leading-7">
-                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
+                With 150+ successful projects and 98% client satisfaction, we've helped students excel from kindergarten to PhD level.
                 
               </p>
             </div>

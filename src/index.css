@@ -80,7 +80,7 @@ button {
 
 .animate-scroll {
   display: flex;
-  animation: 10S scroll linear infinite;
+  animation: 15S scroll linear infinite;
 }
 
 @keyframes marquee {
@@ -107,7 +107,7 @@ button {
 @media (width < 40rem) { 
 
   .animate-marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 }
 

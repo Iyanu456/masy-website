@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import { Helmet } from "react-helmet";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 
 const point2 = [
   {
@@ -75,14 +76,6 @@ const ourServices = [
   },
 
   {
-    icon: "/writing-icon-4.svg",
-    title: "Academic Writing",
-    bodyText:
-      "Support for essays, research papers, dissertations, proposals, and coursework—from undergraduate to PhD level across all disciplines.",
-
-    link: "/writing",
-  },
-  {
     icon: "/writing-icon-5.svg",
     title: "Research Papers & Reports ",
     bodyText:
@@ -119,12 +112,12 @@ const subjects = [
 
 const pricingDetails = [
   {
-    services: "Essays and Reports",
-    priceBasis: "Per word",
+    services: "Business Writing",
+    priceBasis: "Per project",
     details: "Pricing depends on length and complexity",
   },
   {
-    services: "Proposals, Thesis & Dissertations",
+    services: "Content Writing",
     priceBasis: "Per project",
     details: "Flexible milestones available",
   },
@@ -188,7 +181,7 @@ export default function WritingPage() {
         </script>
       </Helmet>
     
-    <main className="mb-[8em]">
+    <main className="mb-[8em] overflow-x-hidden">
       <section className="grid w-full h-[90vh] md:h-[41em] overflow-y-hidden relative max-md:mt-[-1em]">
         <div>
           <img
@@ -200,13 +193,11 @@ export default function WritingPage() {
         <div className="grid place-items-center w-full h-[105%] absolute top-auto bottom-auto left-auto right-auto bg-[#0827468c] mt-[-2em]">
           <div className="flex flex-col gap-3 text-white w-fit m-auto">
             <h1 className="max-w-[90%] max-sm:mt-[2em] max-sm:text-[2.2em] max-md:text-[2.5em] md:text-[3em] xl:text-[3.8em] text-white text-shadow-sm/5 m-auto text-center font-semibold font-public-sans leading-[1.4em] xl:max-w-[80%]">
-              Academic & Content Writing Support You Can Trust
+              Professional and Business Writing Support You Can Trust
             </h1>
 
             <p className="font-poppins lg:text-[1.1em] max-sm:max-w-[85%] max-w-[75%] lg:max-w-[60%] text-center m-auto font-light">
-              From business documents and web content to academic papers—we
-              handle all your writing needs with quality, confidentiality and
-              on-time delivery.
+              From business documents to content writing and research papers, we handle all your writing needs with quality, confidentiality, and timely delivery. 
             </p>
 
             <div className="space-x-4 mt-[2.5em] max-md:mt-[2.5em] max-md:flex flex-col-reverse max-md:w-[80%] max-md:mx-auto gap-[1em] m-auto">
@@ -276,7 +267,7 @@ export default function WritingPage() {
                 Proven Results Over Years
               </h3>
               <p className=" max-sm:leading-7">
-                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
+                With 150+ successful projects and 98% client satisfaction, we've helped professionals across various fields.
                 
               </p>
             </div>
@@ -544,6 +535,22 @@ export default function WritingPage() {
           </div>
         </div>
       </section>
+
+
+      <section
+                      id="testimonials"
+                      className="space-y-3 pt-8 md:pt-16 rounded-xl pb-24 max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full bg-neutral-100 mt-[6em] mb-[2em]"
+                    >
+                      <h2 className="max-sm:text-lg font-semibold text-3xl mx-auto w-fit mb-3 ">
+                        Client Testimonial
+                      </h2>
+                      <p className="w-[80%] md:max-w-[63%] text-center mx-auto mb-0 max-md:mb-[-2em]">
+                        Success stories from our satisfied clients and students
+                      </p>
+                      <TestimonialCarousel writing={true} />
+                    </section>
+
+
 
       <section className="max-md:bg-[#0F6395] max-md:rounded-2xl relative w-[95%] md:w-[80%] mx-auto grid mt-[4em] md:mt-[9em]">
         <div className="md:bg-[#0F6395] md:rounded-2xl h-fit max-md:space-y-2 space-y-4 px-4 md:px-10 py-[3em] md:mt-[5em]">
