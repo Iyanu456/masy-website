@@ -23,8 +23,9 @@ export default function Footer() {
         <div className="space-y-4">
           <h4 className="font-medium mb-2">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Our Services</li>
-            <li>About</li>
+            <li><a target='blank' href="https://www.facebook.com/share/19ZdFXwVRb/?mibextid=wwXIfr" >Facebook</a></li>
+            <li><a target='blank' href="https://www.instagram.com/masyconsulting?igsh=cmhobXFlajI0cDN3&utm_source=qr">Instagram</a></li>
+            <li><a target='blank' href="https://www.linkedin.com/company/masy-consultings/">Linkedin</a></li>
           </ul>
         </div>
 
