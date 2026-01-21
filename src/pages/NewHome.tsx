@@ -42,11 +42,11 @@ const ourServices = [
     icon: "/about-7.png",
     title: "Tutoring Services",
     bodyText:
-      "Personalized one-on-one tutoring that makes learning easy and enjoyable. From kindergarten to A-levels, we help your child build confidence and achieve better grades",
+      "Personalized one-on-one tutoring that makes learning easy and enjoyable. From kindergarten to A-levels, we help your child build confidence and achieve better grades.",
     points: [
-      "Customized Learning Sessions",
-      "Qualified, Patient Tutors",
-      "Homework Help & Exam Preparation",
+      "Customized Learning Sessions.",
+      "Qualified, Patient Tutors.",
+      "Homework Help & Exam Preparation.",
     ],
     link: "/tutoring",
   },

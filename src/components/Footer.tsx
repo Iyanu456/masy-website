@@ -26,6 +26,7 @@ export default function Footer() {
             <li><a target='blank' href="https://www.facebook.com/share/19ZdFXwVRb/?mibextid=wwXIfr" >Facebook</a></li>
             <li><a target='blank' href="https://www.instagram.com/masyconsulting?igsh=cmhobXFlajI0cDN3&utm_source=qr">Instagram</a></li>
             <li><a target='blank' href="https://www.linkedin.com/company/masy-consultings/">Linkedin</a></li>
+            <li><a target='blank' href="https://www.tiktok.com/@masy.consulting">TikTok</a></li>
           </ul>
         </div>
 
