@@ -34,37 +34,28 @@ const ContactForm = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  // Store numbers WITHOUT + or spaces
-  const phoneNumbers = {
-    uk: "447587823545",
-    nigeria: "2349076074997",
-  };
+const phoneNumber = "2349076074997"; // formatted Nigerian number
 
-  const handleWhatsAppClick = (country: "uk" | "nigeria") => {
-    const whatsappMessage = `Hello, my name is ${name}. ${message}`;
+const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  whatsappMessage
+)}`;
 
-    const phoneNumber = phoneNumbers[country];
+window.open(whatsappURL, "_blank");
 
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+// Handlers
+const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  setName(e.target.value);
+};
 
-    window.open(whatsappURL, "_blank");
-  };
+const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  setEmail(e.target.value);
+};
 
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (
-    e: ChangeEvent<HTMLTextAreaElement>
-  ): void => {
-    setMessage(e.target.value);
-  };
+const handleMessageChange = (
+  e: ChangeEvent<HTMLTextAreaElement>
+): void => {
+  setMessage(e.target.value);
+};
 
   return (
     <div>
