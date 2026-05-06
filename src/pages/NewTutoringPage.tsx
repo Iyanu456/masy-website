@@ -145,7 +145,7 @@ const learningStages = [
     ],
   },
   {
-    level: "Secondary school",
+    level: "High School",
     caption: "(Grade 7-11, GCSE, SATs, A-Levels)",
     subjects: [
       "English Language & Literature",
