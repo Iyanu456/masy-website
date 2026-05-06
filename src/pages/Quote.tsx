@@ -311,6 +311,7 @@ ${form.name}
                   "Secondary School",
                   "A-Levels/GCSE",
                   "SATs",
+                  "Adult Classes",
                   "Others, please specify",
                 ]}
                 onChange={(val) => updateTutoringField("level", val)}
