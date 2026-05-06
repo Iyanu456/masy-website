@@ -50,7 +50,7 @@ const learningStages = [
     class: ["Kindergarten", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"]
   },
   {
-    level: "Secondary school",
+    level: "High School",
     class: ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "GSCE", "SATs"]
   },
   {
