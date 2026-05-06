@@ -34,6 +34,7 @@ export default function Footer() {
           <h4 className="font-medium mb-2">Contact Us</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>+234 907 607 4997</li>
+            <li>+44 7587 823545/li>
             <li>masywritings@gmail.com</li>
           </ul>
         </div>
