@@ -36,7 +36,21 @@ const ContactForm = () => {
   const phoneNumber = "2349076074997";
 
   const handleSendToWhatsApp = () => {
-    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const whatsappMessage = `
+Hello MASY Consulting Team,
+
+My name is ${name}, and I’m reaching out via your website.
+
+*Email*: ${email}
+
+*Message*:
+${message}
+
+I look forward to hearing from you.
+
+Best regards,
+${name}
+`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       whatsappMessage
@@ -45,18 +59,15 @@ const ContactForm = () => {
     window.open(whatsappURL, "_blank");
   };
 
-  // Handlers
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 
-  const handleMessageChange = (
-    e: ChangeEvent<HTMLTextAreaElement>
-  ): void => {
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
   };
 
@@ -74,7 +85,7 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-  return (
+return (
     <>
     <Helmet>
         <title>MASY Consulting - Contact Us</title>
