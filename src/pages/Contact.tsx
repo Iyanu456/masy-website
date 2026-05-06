@@ -1,34 +1,8 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, ChangeEvent } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
 
 export default function ContactForm(): JSX.Element {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
-  e.preventDefault();
-
-  const whatsappMessage = `
-Hello MASY Consulting Team,
-
-My name is ${name}, and I’m reaching out via your website.
-
-*Email*: ${email}
-
-*Message*:
-${message}
-
-I look forward to hearing from you.
-
-Best regards,
-${name}
-`;
-
-import { ChangeEvent, useState } from "react";
-
-const ContactForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -39,7 +13,7 @@ const ContactForm = () => {
     const whatsappMessage = `
 Hello MASY Consulting Team,
 
-My name is ${name}, and I’m reaching out via your website.
+My name is ${name}, and I'm reaching out via your website.
 
 *Email*: ${email}
 
@@ -70,22 +44,7 @@ ${name}
   const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
   };
-
   return (
-    <div>
-      <input type="text" value={name} onChange={handleNameChange} />
-      <input type="email" value={email} onChange={handleEmailChange} />
-      <textarea value={message} onChange={handleMessageChange} />
-
-      <button onClick={handleSendToWhatsApp}>
-        Send to WhatsApp
-      </button>
-    </div>
-  );
-};
-
-export default ContactForm;
-return (
     <>
     <Helmet>
         <title>MASY Consulting - Contact Us</title>
