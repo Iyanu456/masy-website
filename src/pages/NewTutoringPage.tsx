@@ -155,7 +155,7 @@ const learningStages = [
     ],
   },
   {
-    level: "Special Classes: Adults & Kids Alike",
+    level: "Special Classes: Adults & Kids",
     caption: "(Language Programs)",
     subjects: [
       "Yoruba",
@@ -166,7 +166,7 @@ const learningStages = [
     ],
   },
    {
-    level: "Special Classes: Adults & Kids Alike",
+    level: "Special Classes: Adults & Kids",
     caption: "(Coding & IT Programs)",
     subjects: [
       "Python Progamming",
