@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
 
@@ -10,21 +10,7 @@ export default function ContactForm(): JSX.Element {
   const phoneNumber = "2349076074997";
 
   const handleSendToWhatsApp = () => {
-    const whatsappMessage = `
-Hello MASY Consulting Team,
-
-My name is ${name}, and I'm reaching out via your website.
-
-*Email*: ${email}
-
-*Message*:
-${message}
-
-I look forward to hearing from you.
-
-Best regards,
-${name}
-`;
+    const whatsappMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       whatsappMessage
@@ -33,132 +19,87 @@ ${name}
     window.open(whatsappURL, "_blank");
   };
 
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleSendToWhatsApp();
+  };
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) =>
     setName(e.target.value);
-  };
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) =>
     setEmail(e.target.value);
-  };
 
-  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) =>
     setMessage(e.target.value);
-  };
+
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>MASY Consulting - Contact Us</title>
         <meta
           name="description"
-          content="Get in touch with MASY Consulting for tutoring or writing services. Request a quote, ask questions, or schedule a consultation today."
+          content="Get in touch with MASY Consulting for tutoring or writing services."
         />
-        <meta
-          name="keywords"
-          content="Masy Consulting, contact, quote request, tutoring contact, writing services contact"
-        />
-        <meta property="og:title" content="Masy Consulting - Contact Us" />
-        <meta
-          property="og:description"
-          content="Contact Masy Consulting for tutoring or professional writing services. Quick response and expert support."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://masyconsulting.com/contact" />
-        <meta property="og:image" content="https://masyconsulting.com/images/contact-og.jpg" />
-
-         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Masy Consulting - Contact Page",
-            "url": "https://masyconsulting.com/contact-us",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Masy Consulting",
-              "url": "https://masyconsulting.com",
-              "logo": "https://masyconsulting.com/masy-logo.png"
-            },
-            "contactType": "Customer Support",
-            "email": "masywritings@gmail.com",
-            "telephone": "+2349076074997"
-          })}
-        </script>
       </Helmet>
-    <section className="w-full mb-16">
-      {/* Header Section */}
-      <div className="w-[90%] mx-auto bg-[#D2DEE4] mt-6 rounded-2xl pt-8 pb-[15em] px-6 text-center">
-        <div className="w-[95%] lg:w-[80%] mx-auto">
-          <a
-            href="/"
-            className="flex items-center text-sm font-medium text-gray-700 hover:text-black"
-          >
-            <ArrowLeft size={18} className="mr-2" />
-            Back to home
-          </a>
-        </div>
 
-        <h1 className="mt-[2em] text-2xl md:text-3xl font-medium mb-3">
-          Send us a message
-        </h1>
-        <p className="max-w-2xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed">
-          Send us a message and we’ll get back to you with the support you need—fast,
-          friendly, and tailored to your goals.
-        </p>
-      </div>
-
-      {/* Form Card */}
-      <div className="bg-white w-[95%] lg:w-[70%] mx-auto mt-[-10em] shadow-sm rounded-2xl p-6 md:p-10">
-        <form onSubmit={handleSubmit} className="space-y-9">
-          <div className="grid grid-cols-1 gap-6 md:gap-8">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div>
-                <label className="block mb-4 text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  value={name}
-                  onChange={handleNameChange}
-                  required
-                  className="w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-4 text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  required
-                  className="w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block mb-4 text-sm font-medium">Message</label>
-              <textarea
-                rows={5}
-                placeholder="Enter your message here"
-                value={message}
-                onChange={handleMessageChange}
-                required
-                className="placeholder:text-[0.95em] w-full rounded-lg px-4 py-3 text-gray-700 bg-[#FAFAFA]"
-              />
-            </div>
+      <section className="w-full mb-16">
+        <div className="w-[90%] mx-auto bg-[#D2DEE4] mt-6 rounded-2xl pt-8 pb-[15em] px-6 text-center">
+          <div className="w-[95%] lg:w-[80%] mx-auto">
+            <a
+              href="/"
+              className="flex items-center text-sm font-medium text-gray-700 hover:text-black"
+            >
+              <ArrowLeft size={18} className="mr-2" />
+              Back to home
+            </a>
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-[#212738] text-white py-3 rounded-lg  hover:bg-[#FF8C00] transition-all flex justify-center align-center "
-          >
-            <img src="/whatsapp-svgrepo-com.svg" alt="" className="inline mr-2 h-6 w-6"/>
+          <h1 className="mt-[2em] text-2xl md:text-3xl font-medium mb-3">
             Send us a message
-            
-          </button>
-        </form>
-      </div>
-    </section>
+          </h1>
+        </div>
+
+        <div className="bg-white w-[95%] lg:w-[70%] mx-auto mt-[-10em] shadow-sm rounded-2xl p-6 md:p-10">
+          <form onSubmit={handleSubmit} className="space-y-9">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={handleNameChange}
+                required
+                className="w-full rounded-lg px-4 py-3 bg-[#FAFAFA]"
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={handleEmailChange}
+                required
+                className="w-full rounded-lg px-4 py-3 bg-[#FAFAFA]"
+              />
+            </div>
+
+            <textarea
+              rows={5}
+              placeholder="Message"
+              value={message}
+              onChange={handleMessageChange}
+              required
+              className="w-full rounded-lg px-4 py-3 bg-[#FAFAFA]"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-[#212738] text-white py-3 rounded-lg hover:bg-[#FF8C00]"
+            >
+              Send via WhatsApp
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }
