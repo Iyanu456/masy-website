@@ -164,7 +164,7 @@ const learningStages = [
       "Igbo",
       "Hausa",
     ],
-  }
+  },
    {
     level: "Special Classes: Adults & Kids Alike",
     caption: "(Coding & IT Programs)",
