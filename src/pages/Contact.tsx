@@ -26,50 +26,48 @@ Best regards,
 ${name}
 `;
 
-
-  import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const ContactForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-const phoneNumber = "2349076074997"; // formatted Nigerian number
+  const phoneNumber = "2349076074997";
 
-const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-  whatsappMessage
-)}`;
+  const handleSendToWhatsApp = () => {
+    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
 
-window.open(whatsappURL, "_blank");
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
 
-// Handlers
-const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
-  setName(e.target.value);
-};
+    window.open(whatsappURL, "_blank");
+  };
 
-const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
-  setEmail(e.target.value);
-};
+  // Handlers
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
+  };
 
-const handleMessageChange = (
-  e: ChangeEvent<HTMLTextAreaElement>
-): void => {
-  setMessage(e.target.value);
-};
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (
+    e: ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    setMessage(e.target.value);
+  };
 
   return (
     <div>
-      <input type="text" placeholder="Name" onChange={handleNameChange} />
-      <input type="email" placeholder="Email" onChange={handleEmailChange} />
-      <textarea placeholder="Message" onChange={handleMessageChange} />
+      <input type="text" value={name} onChange={handleNameChange} />
+      <input type="email" value={email} onChange={handleEmailChange} />
+      <textarea value={message} onChange={handleMessageChange} />
 
-      {/* Buttons for each number */}
-      <button onClick={() => handleWhatsAppClick("nigeria")}>
-        Chat on WhatsApp (Nigeria)
-      </button>
-
-      <button onClick={() => handleWhatsAppClick("uk")}>
-        Chat on WhatsApp (UK)
+      <button onClick={handleSendToWhatsApp}>
+        Send to WhatsApp
       </button>
     </div>
   );
