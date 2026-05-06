@@ -27,25 +27,64 @@ ${name}
 `;
 
 
-  const phoneNumber = "2349076074997"; // formatted Nigerian number
+  import { ChangeEvent, useState } from "react";
 
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
+const ContactForm = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
-  window.open(whatsappURL, "_blank");
-};
+  // Store numbers WITHOUT + or spaces
+  const phoneNumbers = {
+    uk: "447587823545",
+    nigeria: "2349076074997",
+  };
 
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void =>
+  const handleWhatsAppClick = (country: "uk" | "nigeria") => {
+    const whatsappMessage = `Hello, my name is ${name}. ${message}`;
+
+    const phoneNumber = phoneNumbers[country];
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  };
+
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setName(e.target.value);
+  };
 
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void =>
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
+  };
 
   const handleMessageChange = (
     e: ChangeEvent<HTMLTextAreaElement>
-  ): void => setMessage(e.target.value);
+  ): void => {
+    setMessage(e.target.value);
+  };
 
+  return (
+    <div>
+      <input type="text" placeholder="Name" onChange={handleNameChange} />
+      <input type="email" placeholder="Email" onChange={handleEmailChange} />
+      <textarea placeholder="Message" onChange={handleMessageChange} />
+
+      {/* Buttons for each number */}
+      <button onClick={() => handleWhatsAppClick("nigeria")}>
+        Chat on WhatsApp (Nigeria)
+      </button>
+
+      <button onClick={() => handleWhatsAppClick("uk")}>
+        Chat on WhatsApp (UK)
+      </button>
+    </div>
+  );
+};
+
+export default ContactForm;
   return (
     <>
     <Helmet>
