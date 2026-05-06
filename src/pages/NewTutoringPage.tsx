@@ -136,7 +136,7 @@ const tutoringPlans = [
 const learningStages = [
   {
     level: "Primary School",
-    caption: "(Kindergarten - Grade 6)",
+    caption: "(Kindergarten - Grade 6, SATs)",
     subjects: [
       "English & Reading",
       "Mathematics",
@@ -146,7 +146,7 @@ const learningStages = [
   },
   {
     level: "High School",
-    caption: "(Grade 7-11, GCSE, SATs, A-Levels)",
+    caption: "(Grade 7-11, GCSE, A-Levels)",
     subjects: [
       "English Language & Literature",
       "Mathematics & Statistics",
