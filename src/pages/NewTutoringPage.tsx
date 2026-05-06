@@ -141,6 +141,7 @@ const learningStages = [
       "English & Reading",
       "Mathematics",
       "Basic Science",
+      "IQ and Reasoning",
       "Homework Suport",
     ],
   },
