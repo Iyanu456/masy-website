@@ -155,6 +155,17 @@ const learningStages = [
       "Coding & Graphic Design",
     ],
   },
+  {
+    level: "Special Classes",
+    caption: "(Language programs)",
+    subjects: [
+      "Yoruba",
+      "Arabics",
+      "French",
+      "Igbo",
+      "Yoruba",
+    ],
+  }
 ];
 
 export default function NewTutoringPage() {
