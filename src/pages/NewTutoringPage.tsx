@@ -151,19 +151,28 @@ const learningStages = [
       "English Language & Literature",
       "Mathematics & Statistics",
       "Sciences (Biology, Chemistry, Physics)",
-      "Business & Economics",
-      "Coding & Graphic Design",
+      "Business & Economics"
     ],
   },
   {
-    level: "Special Classes",
+    level: "Special Classes: Adults & Kids Alike",
     caption: "(Language programs)",
     subjects: [
       "Yoruba",
-      "Arabics",
+      "Arabic",
       "French",
       "Igbo",
-      "Yoruba",
+      "Hausa",
+    ],
+  }
+   {
+    level: "Special Classes: Adults & Kids Alike",
+    caption: "(Coding & IT Programs)",
+    subjects: [
+      "Python Progamming",
+      "Web Development",
+      "Data Analysis",
+      "Graphic Design",
     ],
   }
 ];
