@@ -326,7 +326,14 @@ ${form.name}
                   "Chemistry",
                   "Physics",
                   "Business & Economics",
-                  "Coding & Graphics Design",
+                  "Yoruba",
+                  "French",
+                  "Arabic",
+                  "Igbo",
+                  "Hausa",
+                  "Data Analysis",
+                  "Coding Classes",
+                  "Graphics Design",
                   "Others, please specify",
                 ]}
                 onChange={(val) => updateTutoringField("subject", val)}
