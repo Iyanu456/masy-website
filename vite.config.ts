@@ -8,6 +8,14 @@ export default defineConfig({
     react(),
     Sitemap({
       hostname: "https://masyconsulting.com",
+      dynamicRoutes: [
+        "/",
+        "/about",
+        "/services",
+        "/contact",
+        "/testimonials",
+        "/quote",
+      ],
     }),
   ],
   resolve: {
