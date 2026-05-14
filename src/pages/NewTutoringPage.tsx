@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "How long are the tutoring sessions?",
     answer:
-      "Typically 45-60 minutes, but we can adjust based on your child's age and attention span.",
+      "Typically 45-90 minutes, but we can adjust based on your child's age and attention span.",
   },
   {
     question: "What if my child doesn't connect with the tutor?",
@@ -195,7 +195,7 @@ export default function NewTutoringPage() {
         />
         <meta
           name="keywords"
-          content="Masy Consulting, tutoring, private tutor, academic support, primary school, secondary school, A-levels, exam preparation"
+          content="Masy Consulting, tutoring, private tutor, academic support, primary school, secondary school, A-levels, language programs, yoruba, french, hausa, exam preparation"
         />
         <meta property="og:title" content="Masy Consulting - Tutoring Services" />
         <meta
@@ -348,7 +348,7 @@ export default function NewTutoringPage() {
       <section className=" w-full h-fit mx-auto py-[5em] bg-[#fb860023]">
         <div>
           <h2 className="text-lg text-center mx-auto md:text-2xl lg:text-4xl font-medium w-[90%] md:leading-14 max-sm:w-[80%] ">
-            Subjects We Cover—From Primary to A-Levels
+           Subjects & Skills We Cover — Children, Teens & Adults
           </h2>
         </div>
 
