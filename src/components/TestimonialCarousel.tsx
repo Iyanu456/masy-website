@@ -116,30 +116,56 @@ const writingTestimonial = [
 ];
 
 const tutoringTestimonial = [
-  
   {
     rating: 5,
-    profile: "/profile-1.png", // replace with real images
-    bodyText: `"The tutoring sessions have been amazing for my daughter. Her confidence and grades have improved significantly"`,
+    profile: "/profile-1.png",
+    bodyText: `The tutoring sessions have been amazing for my daughter. Her confidence and grades have improved significantly.`,
     user: "Parent of Primary School Student",
     userRole: "",
   },
   {
     rating: 5,
     profile: "/profile-2.png",
-    bodyText: `Our tutor is patient and makes everything so clear. My son actually looks forward to his sessions now`,
-    user: "Parent of Grade 8 Student",
+    bodyText: `My daughter received training here and she did well in her exam. In her new school she has received several positive commendations because of her training from here.`,
+    user: "Parent of Grade 8 Student, USA",
+    userRole: "",
+  },
+  {
+    rating: 5,
+    profile: "/profile-3.png",
+    bodyText: `The teachers are very professional and careful with my kids. My kids love their teachers and always look forward to their classes. They now have more confidence in school because they are ahead of the curriculum.`,
+    user: "Parent of 3 Children (Kindergarten to 4th Grade), USA",
+    userRole: "",
+  },
+  {
+    rating: 5,
+    profile: "/profile-1.png",
+    bodyText: `The teacher boosted my children's confidence, understanding and their grades too.`,
+    user: "Parent of Year 7 Student, UK",
+    userRole: "",
+  },
+  {
+    rating: 5,
+    profile: "/profile-2.png",
+    bodyText: `Our tutor is patient and makes everything so clear. My son actually looks forward to his sessions now.`,
+    user: "Parent of Grade 10 Student, USA",
     userRole: "",
   },
   {
     rating: 4,
     profile: "/profile-3.png",
-    bodyText: `"The flexibility is perfect for our busy family schedule. Highly recommend"`,
-    user: "Parent of A-Level Student",
+    bodyText: `The flexibility is perfect for our busy family schedule. Highly recommend.`,
+    user: "Parent of A-Level Student, UK",
+    userRole: "",
+  },
+  {
+    rating: 5,
+    profile: "/profile-1.png",
+    bodyText: `Teachers show genuine interest in the kids by ensuring proper understanding of topics taught, with follow up classwork and homework.`,
+    user: "Parent of Grade 6 & 8 Students, UK",
     userRole: "",
   },
 ];
-
 
 export default function TestimonialCarousel({
   containerClass,
