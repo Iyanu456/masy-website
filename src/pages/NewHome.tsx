@@ -125,10 +125,13 @@ export default function NewHome() {
               Trusted by diaspora families in the UK, USA, Canada & Nigeria
             </p>
             <h2 className="text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.3em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto">
-              Everything Your Child Needs to <span className="text-primary">Excel.</span> All in One Place.
+              Your child can top their class in London,<br />
+              speak Yoruba to their grandmother,<br />
+              and learn to code before their classmates.<br />
+              <span style={{ color: "#F5821F" }}>At Masy, all three are possible.</span>
             </h2>
             <p className="mx-auto lg:mx-0 max-w-[86%] md:text-[0.95em] leading-7 max-sm:pb-2 max-sm:pt-2">
-              We understand what it means to raise a child abroad. You want them to succeed academically where they live, stay rooted in the culture they come from, and build the skills to lead in the future. At Masy, they get all of it. School subjects, African language classes, and coding. Taught with warmth, structure, and the African values you believe in.
+              School subjects, mother tongue language classes, and coding. All in one place. All taught the African way. No Duolingo. No separate tutors. Just Masy.
             </p>
             <div className="space-x-2.5 md:py-6 max-md:flex flex-col max-md:gap-2.5 max-md:w-[80%] max-md:mx-auto">
               <a href="/tutoring" className="btn btn-primary rounded-full md:w-fit lg:w-full xl:w-fit text-center">
@@ -147,6 +150,24 @@ export default function NewHome() {
                 className="w-[80%] h-[100%] max-md:mx-auto md:w-[80%] md:h-[100%] md:mx-auto lg:w-[120%] lg:h-[120%] xl:w-[110%] xl:h-[110%] xl:mb-[3em] object-cover lg:mr-0 ml-auto"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Trust Bar */}
+        <section className="w-full bg-[#2D2D8F] py-[1.4em] px-4">
+          <div className="w-[95%] lg:w-[85%] xl:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0">
+            {[
+              "Pay in Naira or Pounds",
+              "All subjects, languages & coding",
+              "Available 24/7, every time zone",
+              "Nigerian tutors, African way",
+              "One-on-one only, no group classes",
+            ].map((item, i) => (
+              <p key={i} className="flex items-center gap-2 text-white text-[0.85em] font-medium justify-center text-center">
+                <span style={{ color: "#F5821F" }} className="font-bold text-base flex-shrink-0">✓</span>
+                {item}
+              </p>
+            ))}
           </div>
         </section>
 
@@ -327,24 +348,3 @@ export default function NewHome() {
             <div className="my-auto">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white text-center mx-auto">
                 Your Child Deserves the Best of Both Worlds
-              </h2>
-              <p className="text-center text-white mt-8 w-[90%] md:max-w-[68%] mx-auto">
-                Academic excellence. Cultural identity. Future-ready skills. All in one place, all taught with the warmth and structure African parents trust. Book a free consultation today and let us find the right programme for your child.
-              </p>
-              <div className="flex w-fit mx-auto gap-6 mt-[2em] max-sm:flex-col">
-                <a href="/quote" className="btn btn-outline text-white border-white px-8 rounded-full md:w-fit lg:w-full xl:w-fit text-center">
-                  Get Started Now
-                </a>
-                <a href="/contact" className="btn btn-outline bg-white rounded-full md:w-fit lg:w-full xl:w-fit text-center max-sm:w-[18em]">
-                  Send us a message
-                </a>
-              </div>
-            </div>
-            <img src={'writing-service.png'} className="hidden lg:block lg:max-w-[10em] xl:max-w-[18em] max-h-[50%] object-contain" />
-          </div>
-        </section>
-
-      </main>
-    </>
-  );
-}
