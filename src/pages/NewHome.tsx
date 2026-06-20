@@ -124,7 +124,7 @@ export default function NewHome() {
             <p className="text-sm font-medium text-gray-500 uppercase tracking-wide max-md:pt-[3em]">
               Trusted by diaspora families in the UK, USA, Canada & Nigeria
             </p>
-            <h2 className="text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.3em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto">
+            <h2 className="text-[1.05em] max-sm:px-4 font-inter md:text-[1.45em] lg:text-[1.25em] xl:text-[1.45em] 2xl:text-[1.65em] font-semibold leading-8 md:leading-9 lg:leading-9 xl:leading-10 max-md:max-w-[95%] max-md:mx-auto">
               Your child can top their class in London,<br />
               speak Yoruba to their grandmother,<br />
               and learn to code before their classmates.<br />
@@ -172,10 +172,10 @@ export default function NewHome() {
         </section>
 
         {/* Stats Bar */}
-        <section className="grid place-items-center py-[2.2em] max-md:py-[4em] bg-[#1E3A5F] relative">
+        <section className="grid place-items-center py-[2.2em] max-md:py-[4em] bg-white relative border-b border-gray-100">
           <div className="max-sm:w-full w-[90%] lg:w-[82%] mx-auto flex-wrap max-sm:text-[0.8em] md:grid md:grid-cols-2 max-md:grid max-md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-7 max-sm:gap-14">
             {strongPoints.map((item, index) => (
-              <div key={index} className="flex flex-col items-center text-white text-[0.96em]">
+              <div key={index} className="flex flex-col items-center text-[#1E3A5F] text-[0.96em]">
                 <img src={item.icon} className="mb-1 max-w-[35px]" />
                 <p className="font-semibold max-md:mt-2.5 mt-3.5 text-lg lg:text-xl xl:text-2xl">{item.stats}</p>
                 <p className="text-center mt-1">{item.point}</p>
@@ -253,21 +253,6 @@ export default function NewHome() {
                 Book a Free Consultation
               </a>
             </div>
-          </div>
-        </section>
-
-        {/* Language Programme Callout */}
-        <section className="w-full bg-[#FF8C00] py-[4em] px-4 md:px-14 my-[3em]">
-          <div className="w-[95%] md:w-[76%] lg:w-[80%] mx-auto text-center md:text-left">
-            <h2 className="max-sm:text-2xl font-semibold text-3xl leading-snug text-white mb-4">
-              Raise a Child Who Speaks Their Language
-            </h2>
-            <p className="leading-7 text-white/90 md:max-w-[70%] mb-8">
-              The Masy Language Programme is one of the very few places where diaspora kids can learn Yoruba, Igbo, Hausa, French, and Arabic online, taught by tutors who understand the diaspora experience. This is not Duolingo. This is structured, cultural, human teaching. The African way.
-            </p>
-            <a href="/tutoring" className="btn bg-white text-[#FF8C00] font-semibold rounded-full inline-block hover:bg-orange-50">
-              Book a Free Language Class Trial
-            </a>
           </div>
         </section>
 
