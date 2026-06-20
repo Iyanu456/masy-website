@@ -348,3 +348,24 @@ export default function NewHome() {
             <div className="my-auto">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white text-center mx-auto">
                 Your Child Deserves the Best of Both Worlds
+              </h2>
+              <p className="text-center text-white mt-8 w-[90%] md:max-w-[68%] mx-auto">
+                Academic excellence. Cultural identity. Future-ready skills. All in one place, all taught with the warmth and structure African parents trust. Book a free consultation today and let us find the right programme for your child.
+              </p>
+              <div className="flex w-fit mx-auto gap-6 mt-[2em] max-sm:flex-col">
+                <a href="/quote" className="btn btn-outline text-white border-white px-8 rounded-full md:w-fit lg:w-full xl:w-fit text-center">
+                  Get Started Now
+                </a>
+                <a href="/contact" className="btn btn-outline bg-white rounded-full md:w-fit lg:w-full xl:w-fit text-center max-sm:w-[18em]">
+                  Send us a message
+                </a>
+              </div>
+            </div>
+            <img src={'writing-service.png'} className="hidden lg:block lg:max-w-[10em] xl:max-w-[18em] max-h-[50%] object-contain" />
+          </div>
+        </section>
+
+      </main>
+    </>
+  );
+}
