@@ -1,40 +1,17 @@
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { Plus, Minus, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { Facebook } from "lucide-react";
-import { i } from "framer-motion/client";
-
-const aboutUs = [
-  {
-    icon: "/about-1.png",
-    title: "Dedicated Team",
-    bodyText:
-      "Our qualified professionals from diverse fields provide personalized academic support, guiding you every step of the way.",
-  },
-  {
-    icon: "/about-2.png",
-    title: "24/7 Support",
-    bodyText:
-      "We’re available around the clock to ensure you get help whenever you need it — because your success shouldn’t have to wait.",
-  },
-  {
-    icon: "/about-3.png",
-    title: "Custom Solutions",
-    bodyText:
-      "Whether it’s writing support or tutoring, every service is tailored to your unique needs and goals.",
-  },
-];
 
 const ourServices = [
   {
     icon: "/about-8.png",
     title: "Writing Services",
     bodyText:
-      "Professional writing, editing, and research support for businesses, professionals, and academics delivered with clarity, precision, and purpose.  ",
+      "Professional writing support for businesses, executives, and organisations. From proposals and pitch decks to company profiles, grant applications, and executive reports — delivered with clarity, precision, and purpose.",
     points: [
       "Professional & Business Writing.",
-      "Content Writing & Copywriting.",
-      "Editing, Proofreading & Plagiarism Checks.",
+      "Proposals, Pitch Decks & Company Profiles.",
+      "Editing, Proofreading & Content Writing.",
     ],
     link: "/writing",
   },
@@ -42,11 +19,11 @@ const ourServices = [
     icon: "/about-7.png",
     title: "Tutoring Services",
     bodyText:
-      "Personalized one-on-one tutoring that makes learning easy and enjoyable. From kindergarten to A-levels, we help your child build confidence and achieve better grades.",
+      "Personalised one-on-one tutoring that makes learning enjoyable. From kindergarten to A-levels, we help your child build confidence, improve grades, and stay connected to their culture.",
     points: [
-      "Customized Learning Sessions.",
+      "Customised Learning Sessions.",
       "Qualified, Patient Tutors.",
-      "Homework Help & Exam Preparation.",
+      "Nigerian Language Classes for Diaspora Kids.",
     ],
     link: "/tutoring",
   },
@@ -80,38 +57,15 @@ const faqs = [
   },
 ];
 
-const why_us= [
-  {
-    title: "Global Support, Personal Touch",
-    body: "We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams",
-    icon: "",
-    theme: "#EDF4FC"
-  },
-
-  {
-    title: "Proven Results Over Years",
-    body: "With 150+ successful projects and 98% client satisfaction, we've helped students excel from kindergarten to PhD level.",
-    icon: "",
-    theme: "#E9F1EA"
-  },
-
-  {
-    title: "100% Confidential & Original",
-    body: "Your privacy matters. Every piece of work is written from scratch, plagiarism-checked and completely confidential",
-    icon: "",
-    theme: "#FCF3ED"
-  }
-]
-
 const strongPoints = [
   {
     stats: "150+",
-    point: "Completed Projects",
+    point: "Students & Projects Served",
     icon: "/completed-projects.svg",
   },
   {
     stats: "20+",
-    point: "Expert team members",
+    point: "Expert Team Members",
     icon: "/team-members.svg",
   },
   {
@@ -136,31 +90,32 @@ export default function NewHome() {
   return (
     <>
       <main className="w-full mx-auto  max-sm:space-y-8 pb-[12em] overflow-x-hidden">
-        {/* Section 1 */}
+        {/* Hero Section */}
         <section className="max-md:mb-[-0.5em] lg:py-0 md:mt-[3em] mx-auto flex flex-col lg:grid md:grid-cols-[1.8fr_1fr] max-md::grid-cols-[1.8fr_1.1fr] lg:grid-cols-[1.4fr_1.1fr]  w-[95%] md:w-[98%] lg:w-[85%] xl:w-[80%] gap-[3em] lg:gap-6 place-items-center h-[fit-content]">
           {/* Column 1 */}
           <div className="max-md:mx-auto max-md:w-fit lg:py-[4em] md:py-0 md:pt-5 space-y-6 md:space-y-6 h-fit my-auto text-center lg:text-left">
-            <h2 className=" text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.3em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto max-md:pt-[3em]">
-              <span className="text-primary">Need</span> a Professional Writing Support?{<br></br>}Need an Online <span className="text-primary">Tutor</span> for
-              Your Child?
+            <p className="text-sm font-medium text-gray-500 uppercase tracking-wide max-md:pt-[3em]">
+              Trusted by families in the UK, USA, Canada & Nigeria
+            </p>
+            <h2 className=" text-[1.4em] max-sm:px-4 font-inter md:text-[2.2em] lg:text-[1.8em] xl:text-[2.1em] 2xl:text-[2.3em] font-semibold leading-9 md:leading-12 lg:leading-11 xl:leading-12.5 2xl:leading-14 max-md:max-w-[95%] max-md:mx-auto">
+              Where African Children Excel — <span className="text-primary">Academically</span> and <span className="text-primary">Culturally</span>
             </h2>
             <p className="mx-auto lg:mx-0 max-w-[86%] md:text-[0.95em] leading-7 max-sm:pb-2 max-sm:pt-2">
-              Professional writing support and personalized online tutoring for every stage of learning.
+              Personalised online tutoring for K-12 students. Nigerian language classes for diaspora families. Professional writing support for businesses. One trusted team. Available 24/7, wherever you are.
             </p>
 
             <div className="space-x-2.5 md:py-6 max-md:flex flex-col max-md:gap-2.5 max-md:w-[80%] max-md:mx-auto">
-              
-              <a
-                href="/writing"
-                className="btn btn-primary  rounded-full md:w-fit lg:w-full xl:w-fit text-center"
-              >
-                Get Writing Support
-              </a>
               <a
                 href="/tutoring"
+                className="btn btn-primary  rounded-full md:w-fit lg:w-full xl:w-fit text-center"
+              >
+                Find a Tutor for My Child
+              </a>
+              <a
+                href="/writing"
                 className="btn btn-outline rounded-full lg:w-full xl:w-fit text-center"
               >
-                Find a child Tutor
+                Get Business Writing Support
               </a>
             </div>
           </div>
@@ -176,6 +131,7 @@ export default function NewHome() {
           </div>
         </section>
 
+        {/* Stats Bar */}
         <section className="grid place-items-center py-[2.2em] max-md:py-[4em] bg-[#1E3A5F] relative">
           <div className="max-sm:w-full w-[90%] lg:w-[82%] mx-auto flex-wrap max-sm:text-[0.8em] md:grid md:grid-cols-2 max-md:grid max-md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-7 max-sm:gap-14">
             {strongPoints.map((item, index) => (
@@ -193,74 +149,55 @@ export default function NewHome() {
           </div>
         </section>
 
-        {/* Section 2 - Why choose us section */}
-
+        {/* Why Choose Masy Section */}
         <section className="my-[7em] md:my-[10em] max-sm:w-[95%] w-[76%] mx-auto">
-           <h2 className="max-sm:text-2xl font-semibold text-3xl w-fit max-md:mx-auto">
-              Why Choose Masy Consulting
-            </h2>
-            <p className="md:max-w-[63%] text-left mt-2.5 leading-7 mb-[2em] max-md:mx-auto w-fit">
-              Personalized support, Academic Excellence.
-            </p>
+          <h2 className="max-sm:text-2xl font-semibold text-3xl w-fit max-md:mx-auto">
+            Why Families and Businesses Choose Masy
+          </h2>
+          <p className="md:max-w-[63%] text-left mt-2.5 leading-7 mb-[2em] max-md:mx-auto w-fit">
+            Personalised support, proven results.
+          </p>
           <div className=" grid gap-5  md:gap-[2em] grid-cols-3 max-md:flex flex-col">
-           
-            
-
-            <div  className=" bg-[#EDF4FC] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full">
+            <div className=" bg-[#EDF4FC] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full">
               <img src={"/about-2.png"}></img>
               <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
-                Global Support, Personal Touch
+                Global Reach, Personal Touch
               </h3>
               <p className=" max-sm:leading-7">
-                We serve students and families worldwide with 24/7 support, but every project gets individual attention from our expert teams
-                
+                We serve students and families worldwide with 24/7 support, but every child gets individual attention from our qualified tutors — not a one-size-fits-all approach.
               </p>
             </div>
 
-            <div  className="bg-[#E9F1EA] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full ">
+            <div className="bg-[#E9F1EA] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full ">
               <img src={"/about-2.png"}></img>
               <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
-                Proven Results Over Years
+                Proven Results
               </h3>
               <p className=" max-sm:leading-7">
-                With 150+ successful projects and 98% client satisfaction, we've helped students excel from kindergarten to PhD level.
-                
+                150+ students and projects completed. 98% client satisfaction. We've helped children build confidence, improve grades, and reconnect with their roots.
               </p>
             </div>
 
-            <div  className="bg-[#FCF3ED] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full  ">
+            <div className="bg-[#FCF3ED] space-y-1.5 px-7 py-10 pt-12 rounded-xl w-full  ">
               <img src={"/about-2.png"}></img>
               <h3 className="max-md:text-lg text-xl font-semibold mt-5 mb-2">
                 100% Confidential & Original
               </h3>
               <p className=" max-sm:leading-7">
-                Your privacy matters. Every piece of work is written from scratch, plagiarism-checked and completely confidential
-                
+                Your privacy matters. Every piece of work is original, plagiarism-checked, and completely confidential.
               </p>
             </div>
-
-            
-            </div>
-       
-          
-          
+          </div>
         </section>
 
-        {/* Section 3 */}
-
-       
         {/* Our Services */}
-
         <section id="services" className="w-full grid place-items-center bg-[#F9FAFB] my-[7em] max-sm:mt-[3em] px-4 md:px-14 py-16 mb-[9em]">
-          <section
-            
-            className=" gap-6 w-[95%] md:w-[76%] lg:w-[80%] mx-auto"
-          >
+          <section className=" gap-6 w-[95%] md:w-[76%] lg:w-[80%] mx-auto">
             <h2 className="max-sm:text-2xl font-semibold text-3xl w-fit ">
               Our Services
             </h2>
             <p className="md:max-w-[63%] text-left mt-2.5 leading-7">
-              Whether you need expert writing support or personalized tutoring
+              Whether you need expert writing support or personalised tutoring
               for your child, we're here to help you succeed.
             </p>
             <div className="flex flex-col md:grid md:grid-cols-2 gap-6 mt-[3em]">
@@ -299,21 +236,87 @@ export default function NewHome() {
           </section>
         </section>
 
-        {/* Section 5 */}
-        {/* Client Testimonial */}
+        {/* Heritage Language Programme Section */}
+        <section className="w-full bg-[#FFF8F0] py-[5em] px-4 md:px-14 my-[3em]">
+          <div className="w-[95%] md:w-[76%] lg:w-[80%] mx-auto">
+            <div className="md:grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
+              <div className="space-y-6">
+                <span className="inline-block bg-[#FF8C00] text-white text-sm font-medium px-4 py-1.5 rounded-full">
+                  Our Most Unique Service
+                </span>
+                <h2 className="max-sm:text-2xl font-semibold text-3xl leading-snug">
+                  Raise a Child Who Speaks <span className="text-primary">Their Language</span>
+                </h2>
+                <p className="leading-7 md:max-w-[90%]">
+                  Growing up in the UK, USA, or Canada doesn't mean your child has to lose their roots. Our tutors teach Yoruba, Igbo, Hausa, French, and Arabic the African way — warm, structured, and deeply cultural. Classes for children and adults, at times that work for your time zone.
+                </p>
+                <div className="space-y-3 text-[0.95em]">
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary font-bold mt-0.5">✓</span>
+                    <span>Yoruba · Igbo · Hausa · French · Arabic</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary font-bold mt-0.5">✓</span>
+                    <span>Tutors who understand the diaspora experience</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary font-bold mt-0.5">✓</span>
+                    <span>Flexible scheduling across UK, US, Canada & Nigeria time zones</span>
+                  </p>
+                </div>
+                <a href="/tutoring" className="btn btn-primary rounded-full inline-block">
+                  Book a Free Language Class Trial
+                </a>
+              </div>
+              <div className="max-md:mt-8 bg-white rounded-2xl p-8 shadow-sm border border-orange-100 space-y-5">
+                <h3 className="font-semibold text-lg text-[#1E3A5F]">Why families choose our language programme</h3>
+                {[
+                  { title: "Live, interactive sessions", desc: "Real tutors, real conversation — not pre-recorded videos." },
+                  { title: "Any timezone", desc: "Morning in Lagos or evening in New York — we work around your family." },
+                  { title: "Cultural depth", desc: "More than vocabulary. We teach language as identity, heritage, and connection." },
+                  { title: "All ages welcome", desc: "From toddlers learning first words to teens reconnecting with their roots." },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-3">
+                    <span className="text-primary font-bold mt-0.5">✓</span>
+                    <div>
+                      <p className="font-semibold text-sm">{item.title}</p>
+                      <p className="text-gray-600 text-sm leading-6">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Testimonials */}
         <section
           id="testimonials"
           className="bg-gray-100 space-y-3 pt-12 rounded-xl pb-14 max-sm:mt-[3em] max-sm:w-[95%] mx-auto w-full"
         >
           <h2 className="max-sm:text-2xl font-semibold text-3xl mx-auto w-fit mb-3">
-            Client Testimonial
+            Client Testimonials
           </h2>
           <p className="w-[80%] md:max-w-[63%] text-center mx-auto">
-            Success stories from our satisfied students and clients
+            Real results from the families and businesses we've worked with
           </p>
-          <TestimonialCarousel />
+
+          <div className="mt-6 px-4 md:px-10 w-[95%] md:w-[90%] mx-auto">
+            <span className="bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full">
+              Tutoring &amp; Language Families
+            </span>
+          </div>
+          <TestimonialCarousel tutoring />
+
+          <div className="mt-8 px-4 md:px-10 w-[95%] md:w-[90%] mx-auto">
+            <span className="bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full">
+              Writing &amp; Business Clients
+            </span>
+          </div>
+          <TestimonialCarousel writing />
         </section>
 
+        {/* FAQs */}
         <section className="max-sm:mt-[4em] mt-[3em] mb-[7em] space-y-6">
           <h3 className="max-sm:text-xl text-center font-semibold text-3xl">
             FAQs
@@ -337,7 +340,6 @@ export default function NewHome() {
 
                 {openIndex === index && (
                   <p dangerouslySetInnerHTML={{ __html: item.answer }} className="mt-4 text-gray-600 max-sm:text-[0.95em]">
-                    
                   </p>
                 )}
               </div>
@@ -345,34 +347,35 @@ export default function NewHome() {
           </div>
         </section>
 
-
-<section className="grid place-items-center py-[5em] max-md:mb-[-2em] md:py-[8em] bg-[#1E3A5F]">
+        {/* Closing CTA */}
+        <section className="grid place-items-center py-[5em] max-md:mb-[-2em] md:py-[8em] bg-[#1E3A5F]">
           <div className="flex justify-between w-[90%] xl:w-[85%] mx-auto">
             <img src={'/tutoring-service.png'} className="hidden lg:block lg:max-w-[10em] xl:max-w-[16em] max-h-[50%] object-contain"></img>
             <div className="my-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white text-center flex max-md:gap-1.5 gap-3 justify-center mx-auto w-fit flex-wrap">Let's <span>Help </span><span>You</span> <span className="flex flex-col">Succeed!<img className="max-w0[1em] max-h-[0.4em] object-contain" src="/Stroke.svg" /></span></h2>
-              <p className="text-center text-white  mt-8 w-[90%] md:max-w-[68%] mx-auto">Whether you need writing support or tutoring for your child, we're just one message away. Get your free consultation today.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white text-center flex max-md:gap-1.5 gap-3 justify-center mx-auto w-fit flex-wrap">
+                Let's Help Your Family or Business <span className="flex flex-col">Succeed!<img className="max-w0[1em] max-h-[0.4em] object-contain" src="/Stroke.svg" /></span>
+              </h2>
+              <p className="text-center text-white  mt-8 w-[90%] md:max-w-[68%] mx-auto">
+                Whether you need a tutor for your child, language classes to keep your culture alive, or professional writing that wins — we're one message away. Book your free consultation today.
+              </p>
               <div className="flex w-fit mx-auto gap-6 mt-[2em] max-sm:flex-col">
-              <a
-                href="/quote"
-                className="btn btn-outline text-white border-white px-8 rounded-full md:w-fit lg:w-full xl:w-fit text-center"
-              >
-                Get Started Now
-              </a>
-              <a
-                href="/contact"
-                className="btn btn-outline bg-white rounded-full md:w-fit lg:w-full xl:w-fit text-center max-sm:w-[18em]"
-              >
-                Send us a message
-              </a>
-            </div>
+                <a
+                  href="/quote"
+                  className="btn btn-outline text-white border-white px-8 rounded-full md:w-fit lg:w-full xl:w-fit text-center"
+                >
+                  Get Started Now
+                </a>
+                <a
+                  href="/contact"
+                  className="btn btn-outline bg-white rounded-full md:w-fit lg:w-full xl:w-fit text-center max-sm:w-[18em]"
+                >
+                  Send us a message
+                </a>
+              </div>
             </div>
             <img src={'writing-service.png'} className="hidden lg:block lg:max-w-[10em] xl:max-w-[18em] max-h-[50%] object-contain"></img>
           </div>
         </section>
-
-
-       
       </main>
     </>
   );
